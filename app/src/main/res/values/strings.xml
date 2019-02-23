@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">APP Test Colorimetria</string>
+    <string name="todo">TODO</string>
+    <string name="salir">Salir</string>
+    <string name="comenzar_analisis">Comenzar analisis</string>
+    <string name="app_desarrollada_con_el_prop_sito_de_ayudar_en_la_detecci_n_de_sustancias">App desarrollada con el propósito de ayudar en la detección de sustancias</string>
+    <string name="cargar_imagen">Cargar Imagen</string>
+    <string name="gestionar_imagen">GESTIONAR IMAGEN</string>
+    <string name="pasar_a_test">Pasar a Test</string>
+    <string name="volver">Volver</string>
+    <string name="muestra_marckis">Muestra Marckis</string>
+    <string name="radiobutton">RadioButton</string>
+    <string name="no_reaction">NO REACTION</string>
+    <string name="pasar_a_mecke">Pasar a Mecke</string>
+</resources>
