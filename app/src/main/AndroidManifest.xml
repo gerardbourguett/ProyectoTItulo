@@ -16,7 +16,11 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".MuestraMarckisActivity"></activity>
+        <activity android:name=".ResultadosActivity"></activity>
+        <activity android:name=".MuestraSimonActivity" />
+        <activity android:name=".MuestraMandelinActivity" />
+        <activity android:name=".MuestraMeckeActivity" />
+        <activity android:name=".MuestraMarckisActivity" />
         <activity android:name=".CamaraActivity" />
         <activity android:name=".MainActivity">
             <intent-filter>

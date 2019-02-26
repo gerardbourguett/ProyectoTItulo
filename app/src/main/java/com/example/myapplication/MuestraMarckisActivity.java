@@ -5,7 +5,6 @@ import android.content.Intent;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.graphics.Color;
-import android.provider.MediaStore;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.MotionEvent;
@@ -15,7 +14,7 @@ import android.widget.ImageView;
 import android.widget.RadioButton;
 import android.widget.Toast;
 
-import com.example.myapplication.bitmap.BitmapHelper;
+import java.io.ByteArrayOutputStream;
 
 public class MuestraMarckisActivity extends AppCompatActivity {
 
@@ -32,7 +31,7 @@ public class MuestraMarckisActivity extends AppCompatActivity {
         mar_rgb = findViewById(R.id.marckisRGB);
         marckis_nr = findViewById(R.id.mar_nr);
 
-        imageMa = (ImageView) findViewById(R.id.imagen2);
+        imageMa = (ImageView) findViewById(R.id.imagen4);
         Bitmap bmp;
 
         byte[] byteArray = getIntent().getByteArrayExtra("image");
@@ -45,7 +44,7 @@ public class MuestraMarckisActivity extends AppCompatActivity {
             imageMa.setImageBitmap(bmp);
         }
 
-        volver = findViewById(R.id.btnMarVolver);
+        volver = findViewById(R.id.btnManVolver);
 
         volver.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -85,12 +84,24 @@ public class MuestraMarckisActivity extends AppCompatActivity {
             }
         });
 
-        continuarMecke = findViewById(R.id.btnMecke);
+        continuarMecke = findViewById(R.id.btnResultados);
 
         continuarMecke.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 validar();
+
+                imageMa.buildDrawingCache();
+                Bitmap bitmap = imageMa.getDrawingCache();
+
+                ByteArrayOutputStream bStream = new ByteArrayOutputStream();
+                bitmap.compress(Bitmap.CompressFormat.PNG, 100, bStream);
+                byte[] byteArray = bStream.toByteArray();
+
+                Intent anotherIntent = new Intent(getApplicationContext(), MuestraMeckeActivity.class);
+                anotherIntent.putExtra("image2", byteArray);
+                startActivity(anotherIntent);
+                finish();
             }
         });
 
@@ -111,12 +122,13 @@ public class MuestraMarckisActivity extends AppCompatActivity {
     }
 
 
-    /*public String ColorHex(int r,int g,int b){
-        String color = "";
-        color = "#";
-        color+=Integer.toHexString(r);
-        color+=Integer.toHexString(g);
-        color+=Integer.toHexString(b);
-        return color;
-    }*/
+    //
+//public String ColorHex(int r,int g,int b){
+//String color = "";
+//color = "#";
+//color+=Integer.toHexString(r);
+//color+=Integer.toHexString(g);
+//color+=Integer.toHexString(b);
+//return color;
+//}
 }

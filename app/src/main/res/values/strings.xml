@@ -12,4 +12,9 @@
     <string name="radiobutton">RadioButton</string>
     <string name="no_reaction">NO REACTION</string>
     <string name="pasar_a_mecke">Pasar a Mecke</string>
+    <string name="pasar_a_mandelin">Pasar a Mandelin</string>
+    <string name="muestra_mecke">Muestra Mecke</string>
+    <string name="muestra_simon">Muestra Simon</string>
+    <string name="pasar_a_simon">Pasar a Simon</string>
+    <string name="muestra_mandelin">Muestra Mandelin</string>
 </resources>
