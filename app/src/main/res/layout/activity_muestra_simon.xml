@@ -11,7 +11,7 @@
     <ImageView
         android:id="@+id/imagen_simon"
         android:layout_width="0dp"
-        android:layout_height="0dp"
+        android:layout_height="362dp"
         android:layout_marginStart="57dp"
         android:layout_marginTop="54dp"
         android:layout_marginEnd="57dp"

@@ -34,16 +34,16 @@ public class MuestraMandelinActivity extends AppCompatActivity {
         enviarSimon = findViewById(R.id.btn_enviar_man);
 
         imageMan = (ImageView) findViewById(R.id.imagen_mandelin);
-        Bitmap bmp;
+        Bitmap bmp3;
 
-        byte[] byteArray = getIntent().getByteArrayExtra("image");
-        bmp = BitmapFactory.decodeByteArray(byteArray, 0, byteArray.length);
+        byte[] byteArray3 = getIntent().getByteArrayExtra("image3");
+        bmp3 = BitmapFactory.decodeByteArray(byteArray3, 0, byteArray3.length);
 
         Bundle bundle = getIntent().getExtras();
 
         if (bundle!=null){
-            int image = bundle.getInt("image");
-            imageMan.setImageBitmap(bmp);
+            int image = bundle.getInt("image3");
+            imageMan.setImageBitmap(bmp3);
         }
 
         vol_mandelin_inicio = findViewById(R.id.btnManVolver);
@@ -104,7 +104,7 @@ public class MuestraMandelinActivity extends AppCompatActivity {
                 byte[] byteArray = bStream.toByteArray();
 
                 Intent anotherIntent = new Intent(MuestraMandelinActivity.this, MuestraSimonActivity.class);
-                anotherIntent.putExtra("image2", byteArray);
+                anotherIntent.putExtra("image4", byteArray);
                 startActivity(anotherIntent);
                 finish();
             }
@@ -131,11 +131,11 @@ public class MuestraMandelinActivity extends AppCompatActivity {
 
         Toast.makeText(getApplicationContext(), "Muestra Registrada", Toast.LENGTH_SHORT).show();
 
-        Intent intent = new Intent(getApplicationContext(), ResultadosActivity.class);
+        /*Intent intent = new Intent(getApplicationContext(), ResultadosActivity.class);
 
         intent.putExtra("man_red", red3);
         intent.putExtra("man_gre", green3);
-        intent.putExtra("man_blu", blue3);
+        intent.putExtra("man_blu", blue3);*/
         //startActivity(intent);
     }
 }

@@ -95,16 +95,17 @@ public class MuestraMeckeActivity extends AppCompatActivity {
         continuarMandelin.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                validar();
 
                 imageMe.buildDrawingCache();
                 Bitmap bitmap = imageMe.getDrawingCache();
 
                 ByteArrayOutputStream bStream = new ByteArrayOutputStream();
-                bitmap.compress(Bitmap.CompressFormat.PNG, 100, bStream);
+                bitmap.compress(Bitmap.CompressFormat.PNG, 0, bStream);
                 byte[] byteArray = bStream.toByteArray();
 
                 Intent anotherIntent = new Intent(MuestraMeckeActivity.this, MuestraMandelinActivity.class);
-                anotherIntent.putExtra("image2", byteArray);
+                anotherIntent.putExtra("image3", byteArray);
                 startActivity(anotherIntent);
                 finish();
             }

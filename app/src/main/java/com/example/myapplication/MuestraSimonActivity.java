@@ -34,16 +34,16 @@ public class MuestraSimonActivity extends AppCompatActivity {
         enviarMecke = findViewById(R.id.btn_enviar_sim);
 
         imageMe = (ImageView) findViewById(R.id.imagen_simon);
-        Bitmap bmp;
+        Bitmap bmp4;
 
-        byte[] byteArray = getIntent().getByteArrayExtra("image");
-        bmp = BitmapFactory.decodeByteArray(byteArray, 0, byteArray.length);
+        byte[] byteArray4 = getIntent().getByteArrayExtra("image4");
+        bmp4 = BitmapFactory.decodeByteArray(byteArray4, 0, byteArray4.length);
 
         Bundle bundle = getIntent().getExtras();
 
         if (bundle!=null){
-            int image = bundle.getInt("image");
-            imageMe.setImageBitmap(bmp);
+            int image = bundle.getInt("image4");
+            imageMe.setImageBitmap(bmp4);
         }
 
         vol_Mecke_inicio = findViewById(R.id.btnSimVolver);
@@ -103,8 +103,7 @@ public class MuestraSimonActivity extends AppCompatActivity {
                 bitmap.compress(Bitmap.CompressFormat.PNG, 100, bStream);
                 byte[] byteArray = bStream.toByteArray();
 
-                Intent anotherIntent = new Intent(getApplicationContext(), MuestraMandelinActivity.class);
-                anotherIntent.putExtra("image2", byteArray);
+                Intent anotherIntent = new Intent(getApplicationContext(), ResultadosActivity.class);
                 startActivity(anotherIntent);
                 finish();
             }
@@ -131,11 +130,11 @@ public class MuestraSimonActivity extends AppCompatActivity {
 
         Toast.makeText(getApplicationContext(), "Muestra Registrada", Toast.LENGTH_SHORT).show();
 
-        Intent intent = new Intent(getApplicationContext(), ResultadosActivity.class);
+        /*Intent intent = new Intent(getApplicationContext(), ResultadosActivity.class);
 
         intent.putExtra("sim_red", red2);
         intent.putExtra("sim_gre", green2);
-        intent.putExtra("sim_blu", blue2);
+        intent.putExtra("sim_blu", blue2);*/
         //startActivity(intent);
     }
 }

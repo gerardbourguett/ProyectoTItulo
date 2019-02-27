@@ -95,6 +95,7 @@ public class MuestraMarckisActivity extends AppCompatActivity {
         continuarMecke.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                validar();
 
                 imageMa.buildDrawingCache();
                 Bitmap bitmap = imageMa.getDrawingCache();
@@ -136,7 +137,7 @@ public class MuestraMarckisActivity extends AppCompatActivity {
         intent.putExtra("mar_red", red1);
         intent.putExtra("mar_gre", green1);
         intent.putExtra("mar_blu", blue1);
-        //startActivity(intent);
+        startActivity(intent);
     }
 
 
