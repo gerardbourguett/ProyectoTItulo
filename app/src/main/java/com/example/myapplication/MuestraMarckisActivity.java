@@ -18,9 +18,10 @@ import java.io.ByteArrayOutputStream;
 
 public class MuestraMarckisActivity extends AppCompatActivity {
 
-    Button volver, continuarMecke;
+    Button vol_mar_inicio, continuarMecke, enviarMar;
     ImageView imageMa;
     RadioButton mar_rgb, marckis_nr;
+    String red1, green1, blue1;
 
     @SuppressLint("ClickableViewAccessibility")
     @Override
@@ -30,8 +31,9 @@ public class MuestraMarckisActivity extends AppCompatActivity {
         
         mar_rgb = findViewById(R.id.marckisRGB);
         marckis_nr = findViewById(R.id.mar_nr);
+        enviarMar = findViewById(R.id.btn_enviar_mar);
 
-        imageMa = (ImageView) findViewById(R.id.imagen4);
+        imageMa = (ImageView) findViewById(R.id.imagen_marckis);
         Bitmap bmp;
 
         byte[] byteArray = getIntent().getByteArrayExtra("image");
@@ -44,12 +46,12 @@ public class MuestraMarckisActivity extends AppCompatActivity {
             imageMa.setImageBitmap(bmp);
         }
 
-        volver = findViewById(R.id.btnManVolver);
+        vol_mar_inicio = findViewById(R.id.btnMarVolver);
 
-        volver.setOnClickListener(new View.OnClickListener() {
+        vol_mar_inicio.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(getApplicationContext(), CamaraActivity.class);
+                Intent intent = new Intent(MuestraMarckisActivity.this, CamaraActivity.class);
                 startActivity(intent);
             }
         });
@@ -72,6 +74,10 @@ public class MuestraMarckisActivity extends AppCompatActivity {
                     //textView.setBackgroundColor(Color.rgb(r,g,b));
                     mar_rgb.setText("RGB ("+r+","+g+","+b+")");
 
+                    red1 = String.valueOf(r);
+                    green1 = String.valueOf(g);
+                    blue1 = String.valueOf(b);
+
                     /*
                     String c = ColorHex(r,g,b);
                     hexView.setText(c);
@@ -84,12 +90,11 @@ public class MuestraMarckisActivity extends AppCompatActivity {
             }
         });
 
-        continuarMecke = findViewById(R.id.btnResultados);
+        continuarMecke = findViewById(R.id.btnMecke);
 
         continuarMecke.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                validar();
 
                 imageMa.buildDrawingCache();
                 Bitmap bitmap = imageMa.getDrawingCache();
@@ -98,10 +103,17 @@ public class MuestraMarckisActivity extends AppCompatActivity {
                 bitmap.compress(Bitmap.CompressFormat.PNG, 100, bStream);
                 byte[] byteArray = bStream.toByteArray();
 
-                Intent anotherIntent = new Intent(getApplicationContext(), MuestraMeckeActivity.class);
+                Intent anotherIntent = new Intent(MuestraMarckisActivity.this, MuestraMeckeActivity.class);
                 anotherIntent.putExtra("image2", byteArray);
                 startActivity(anotherIntent);
                 finish();
+            }
+        });
+
+        enviarMar.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                validar();
             }
         });
 
@@ -117,8 +129,14 @@ public class MuestraMarckisActivity extends AppCompatActivity {
             res = "NO REACTION";
         }
 
-        Toast.makeText(getApplicationContext(), res, Toast.LENGTH_SHORT).show();
+        Toast.makeText(getApplicationContext(), "Muestra Registrada", Toast.LENGTH_SHORT).show();
 
+        Intent intent = new Intent(getApplicationContext(), ResultadosActivity.class);
+
+        intent.putExtra("mar_red", red1);
+        intent.putExtra("mar_gre", green1);
+        intent.putExtra("mar_blu", blue1);
+        //startActivity(intent);
     }
 
 

@@ -17,4 +17,5 @@
     <string name="muestra_simon">Muestra Simon</string>
     <string name="pasar_a_simon">Pasar a Simon</string>
     <string name="muestra_mandelin">Muestra Mandelin</string>
+    <string name="registrar_muestra">Registrar Muestra</string>
 </resources>

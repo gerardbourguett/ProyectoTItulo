@@ -2,58 +2,57 @@
 <android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:background="@drawable/fondo"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/fondo"
     tools:context=".MuestraSimonActivity">
 
+    <ImageView
+        android:id="@+id/imagen_simon"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="57dp"
+        android:layout_marginTop="54dp"
+        android:layout_marginEnd="57dp"
+        android:layout_marginBottom="19dp"
+        android:contentDescription="@string/todo"
+        app:layout_constraintBottom_toTopOf="@+id/tv_simon"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/img_base" />
+
     <TextView
-        android:id="@+id/textView2"
-        android:layout_width="166dp"
-        android:layout_height="20dp"
-        android:layout_marginTop="75dp"
-        android:layout_marginBottom="40dp"
-        android:text="Muestra Simon"
+        android:id="@+id/tv_simon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="112dp"
+        android:text="@string/muestra_simon"
         android:textAlignment="center"
         android:textColor="@color/primaryLightColor"
         android:textSize="18sp"
         android:textStyle="bold"
-        app:layout_constraintBottom_toTopOf="@+id/imagen3"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <ImageView
-        android:id="@+id/imagen3"
-        android:layout_width="272dp"
-        android:layout_height="251dp"
-        android:layout_marginStart="46dp"
-        android:layout_marginEnd="46dp"
-        android:layout_marginBottom="15dp"
-        android:contentDescription="@string/todo"
-        app:layout_constraintBottom_toTopOf="@+id/rg_me"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView2"
-        app:srcCompat="@drawable/img_base" />
+        app:layout_constraintBottom_toTopOf="@+id/btn_enviar_sim"
+        app:layout_constraintStart_toStartOf="@+id/rg_sim"
+        app:layout_constraintTop_toBottomOf="@+id/imagen_simon" />
 
     <RadioGroup
-        android:id="@+id/rg_me"
+        android:id="@+id/rg_sim"
         android:layout_width="145dp"
         android:layout_height="85dp"
         android:layout_marginBottom="17dp"
-        app:layout_constraintBottom_toTopOf="@+id/btnResultados"
+        app:layout_constraintBottom_toTopOf="@+id/btnResul"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imagen3">
+        app:layout_constraintTop_toBottomOf="@+id/imagen_simon">
 
         <RadioButton
-            android:id="@+id/meckeRGB"
+            android:id="@+id/simonRGB"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="@string/radiobutton"
-            android:textAlignment="viewStart" />
+            android:text="@string/radiobutton" />
 
         <Space
             android:layout_width="wrap_content"
@@ -71,29 +70,40 @@
     </RadioGroup>
 
     <Button
-        android:id="@+id/btnResultados"
+        android:id="@+id/btn_enviar_sim"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="30dp"
         android:layout_marginEnd="30dp"
-        android:layout_marginBottom="20dp"
-        android:text="Resultados Finales"
-        app:layout_constraintBottom_toTopOf="@+id/btnMeVolver"
+        android:text="@string/registrar_muestra"
+        app:layout_constraintBottom_toTopOf="@+id/btnResul"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/rg_me" />
+        app:layout_constraintTop_toBottomOf="@+id/tv_simon" />
 
     <Button
-        android:id="@+id/btnMeVolver"
+        android:id="@+id/btnResul"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="30dp"
         android:layout_marginEnd="30dp"
-        android:layout_marginBottom="73dp"
+        android:text="@string/pasar_a_mandelin"
+        app:layout_constraintBottom_toTopOf="@+id/btnSimVolver"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btn_enviar_sim" />
+
+    <Button
+        android:id="@+id/btnSimVolver"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="30dp"
+        android:layout_marginEnd="30dp"
+        android:layout_marginBottom="49dp"
         android:text="@string/volver"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btnResultados" />
+        app:layout_constraintTop_toBottomOf="@+id/btnResul" />
 
 </android.support.constraint.ConstraintLayout>
