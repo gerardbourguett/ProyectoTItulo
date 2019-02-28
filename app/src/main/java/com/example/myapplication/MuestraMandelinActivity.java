@@ -31,7 +31,6 @@ public class MuestraMandelinActivity extends AppCompatActivity {
 
         man_rgb = findViewById(R.id.mandelinRGB);
         mandelin_nr = findViewById(R.id.man_nr);
-        enviarSimon = findViewById(R.id.btn_enviar_man);
 
         imageMan = (ImageView) findViewById(R.id.imagen_mandelin);
         Bitmap bmp3;
@@ -95,6 +94,7 @@ public class MuestraMandelinActivity extends AppCompatActivity {
         continuarSimon.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                validar();
 
                 imageMan.buildDrawingCache();
                 Bitmap bitmap = imageMan.getDrawingCache();
@@ -110,12 +110,6 @@ public class MuestraMandelinActivity extends AppCompatActivity {
             }
         });
 
-        enviarSimon.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                validar();
-            }
-        });
 
     }
 

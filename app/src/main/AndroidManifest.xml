@@ -4,7 +4,7 @@
 
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
-    <uses-permission android:name="android.permission.CAMERA"/>
+    <uses-permission android:name="android.permission.CAMERA" />
 
     <application
         android:allowBackup="true"
@@ -13,13 +13,14 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".ResultadosActivity"></activity>
-        <activity android:name=".MuestraSimonActivity" />
-        <activity android:name=".MuestraMandelinActivity" />
-        <activity android:name=".MuestraMeckeActivity" />
-        <activity android:name=".MuestraMarckisActivity" />
-        <activity android:name=".CamaraActivity" />
-        <activity android:name=".MainActivity">
+        <activity android:name=".TablaMarckisActivity"></activity>
+        <activity android:name=".ResultadosActivity" android:screenOrientation="portrait"/>
+        <activity android:name=".MuestraSimonActivity" android:screenOrientation="portrait"/>
+        <activity android:name=".MuestraMandelinActivity" android:screenOrientation="portrait"/>
+        <activity android:name=".MuestraMeckeActivity" android:screenOrientation="portrait"/>
+        <activity android:name=".MuestraMarckisActivity" android:screenOrientation="portrait"/>
+        <activity android:name=".CamaraActivity" android:screenOrientation="portrait"/>
+        <activity android:name=".MainActivity" android:screenOrientation="portrait">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

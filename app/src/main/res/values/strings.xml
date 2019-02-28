@@ -18,4 +18,9 @@
     <string name="pasar_a_simon">Pasar a Simon</string>
     <string name="muestra_mandelin">Muestra Mandelin</string>
     <string name="registrar_muestra">Registrar Muestra</string>
+    <string name="textview">TextView</string>
+    <string name="resultados">Resultados</string>
+    <string name="r">R</string>
+    <string name="b">B</string>
+    <string name="g">G</string>
 </resources>

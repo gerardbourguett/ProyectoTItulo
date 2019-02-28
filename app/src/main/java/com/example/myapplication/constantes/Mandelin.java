@@ -1,0 +1,115 @@
+package com.example.myapplication.constantes;
+
+public interface Mandelin {
+
+    int MANDELIN_RED_MDMA = 8;
+    int MANDELIN_GREEN_MDMA = 8;
+    int MANDELIN_BLUE_MDMA = 10;
+    String MANDELIN_SMDMA = "MDMA";
+
+    int MANDELIN_RED_MDE = 8;
+    int MANDELIN_GREEN_MDE = 8;
+    int MANDELIN_BLUE_MDE = 10;
+    String MANDELIN_SMDE = "MDE";
+
+    int MANDELIN_RED_SASS = 8;
+    int MANDELIN_GREEN_SASS = 8;
+    int MANDELIN_BLUE_SASS = 10;
+    String MANDELIN_SSASS = "MDA (Sass)";
+
+    int MANDELIN_RED_5APB = 8;
+    int MANDELIN_GREEN_5APB = 8;
+    int MANDELIN_BLUE_5APB = 10;
+    String MANDELIN_S5APB = "5-APB";
+
+    int MANDELIN_RED_6APB = 8;
+    int MANDELIN_GREEN_6APB = 8;
+    int MANDELIN_BLUE_6APB = 10;
+    String MANDELIN_S6APB = "6-APB";
+
+    int MANDELIN_RED_DXM = 8;
+    int MANDELIN_GREEN_DXM = 8;
+    int MANDELIN_BLUE_DXM = 10;
+    String MANDELIN_SDXM = "DXM";
+
+    int MANDELIN_RED_ETHYLONE = 8;
+    int MANDELIN_GREEN_ETHYLONE = 8;
+    int MANDELIN_BLUE_ETHYLONE = 10;
+    String MANDELIN_SETHYLONE = "Ethylone";
+
+    int MANDELIN_RED_SUGAR = 8;
+    int MANDELIN_GREEN_SUGAR = 8;
+    int MANDELIN_BLUE_SUGAR = 10;
+    String MANDELIN_SSUGAR = "Sugar";
+
+    int MANDELIN_RED_METHYLONE = 244;
+    int MANDELIN_GREEN_METHYLONE = 238;
+    int MANDELIN_BLUE_METHYLONE = 80;
+    String MANDELIN_SMETHYLONE = "Methylone";
+
+    int MANDELIN_RED_BUTYLONE = 244;
+    int MANDELIN_GREEN_BUTYLONE = 238;
+    int MANDELIN_BLUE_BUTYLONE = 80;
+    String MANDELIN_SBUTYLONE = "Butylone";
+
+    int MANDELIN_RED_MDPV = 244;
+    int MANDELIN_GREEN_MDPV = 238;
+    int MANDELIN_BLUE_MDPVE = 80;
+    String MANDELIN_SMDPV = "MDPV";
+
+    int MANDELIN_RED_METANPHETAMINE= 223;
+    int  MANDELIN_GREEN_METANPHETAMINE = 113;
+    int MANDELIN_BLUE_METANPHETAMINE = 44;
+    String MANDELIN_SMETAMPHETAMINE = "Metamphetamine / Amphetamine / Mescaline";
+
+    int MANDELIN_RED_AMPHETAMINE= 223;
+    int  MANDELIN_GREEN_AMPHETAMINE = 113;
+    int MANDELIN_BLUE_AMPHETAMINE = 44;
+    String MANDELIN_SAMPHETAMINE = "Metamphetamine / Amphetamine / Mescaline";
+
+    int MANDELIN_RED_MESCALINE= 223;
+    int  MANDELIN_GREEN_MESCALINE = 113;
+    int MANDELIN_BLUE_MESCALINE = 44;
+    String MANDELIN_S3 = "Metamphetamine / Amphetamine / Mescaline";
+
+    int MANDELIN_RED_CODEYNE = 184;
+    int MANDELIN_GREEN_CODEYNE = 156;
+    int MANDELIN_BLUE_CODEYNE = 195;
+    String MANDELIN_SCODEYNE = "Codeyne";
+
+    int MANDELIN_RED_MORPHINE = 184;
+    int MANDELIN_GREEN_MORPHINE = 156;
+    int MANDELIN_BLUE_MORPHINE = 195;
+    String MANDELIN_SMORPHINE = "Morphine";
+
+    int MANDELIN_RED_OXYCODONE = 184;
+    int MANDELIN_GREEN_OXYCODONE = 156;
+    int MANDELIN_BLUE_OXYCODONE = 195;
+    String MANDELIN_SOXYCODONE = "Oxycodone";
+
+    int MANDELIN_RED_ACB = 18;
+    int MANDELIN_GREEN_ACB = 83;
+    int MANDELIN_BLUE_ACB = 48;
+    String MANDELIN_S5 = "aC-B";
+
+    int MANDELIN_RED_AC1 = 37;
+    int MANDELIN_GREEN_AC1 = 70;
+    int MANDELIN_BLUE_AC1 = 120;
+    String MANDELIN_SAC1 = "aC-I";
+
+    int MANDELIN_RED_HEROIN = 143;
+    int MANDELIN_GREEN_HEROIN = 27;
+    int MANDELIN_BLUE_HEROIN = 38;
+    String MANDELIN_SHEROIN = "Heroin";
+
+    int MANDELIN_RED_ASPIRIN = 236;
+    int MANDELIN_GREEN_ASPIRIN = 43;
+    int MANDELIN_BLUE_ASPIRIN = 51;
+    String MANDELIN_SASPIRIN = "Aspirin";
+
+    int MANDELIN_REDNR = 180;
+    int MANDELIN_GREENNR = 151;
+    int MANDELIN_BLUENR = 120;
+    String MANDELIN_NR = "SIN REACCIÓN";
+
+}

@@ -14,6 +14,8 @@ import android.widget.ImageView;
 import android.widget.RadioButton;
 import android.widget.Toast;
 
+import com.example.myapplication.objeto.ObjectMarckis;
+
 import java.io.ByteArrayOutputStream;
 
 public class MuestraMarckisActivity extends AppCompatActivity {
@@ -31,7 +33,6 @@ public class MuestraMarckisActivity extends AppCompatActivity {
         
         mar_rgb = findViewById(R.id.marckisRGB);
         marckis_nr = findViewById(R.id.mar_nr);
-        enviarMar = findViewById(R.id.btn_enviar_mar);
 
         imageMa = (ImageView) findViewById(R.id.imagen_marckis);
         Bitmap bmp;
@@ -71,18 +72,17 @@ public class MuestraMarckisActivity extends AppCompatActivity {
                     int g = Color.green(pixel);
                     int b = Color.blue(pixel);
                     
-                    //textView.setBackgroundColor(Color.rgb(r,g,b));
-                    mar_rgb.setText("RGB ("+r+","+g+","+b+")");
+                    mar_rgb.setBackgroundColor(Color.rgb(r,g,b));
+                    //mar_rgb.setText("RGB ("+r+","+g+","+b+")");
 
                     red1 = String.valueOf(r);
                     green1 = String.valueOf(g);
                     blue1 = String.valueOf(b);
 
-                    /*
+
                     String c = ColorHex(r,g,b);
-                    hexView.setText(c);
-                    color.setBackgroundColor(android.graphics.Color.rgb(r,g,b));
-                    */
+                    //hexView.setText(c);
+                    //olor.setBackgroundColor(android.graphics.Color.rgb(r,g,b));
 
                 }
 
@@ -105,16 +105,15 @@ public class MuestraMarckisActivity extends AppCompatActivity {
                 byte[] byteArray = bStream.toByteArray();
 
                 Intent anotherIntent = new Intent(MuestraMarckisActivity.this, MuestraMeckeActivity.class);
+
+                ObjectMarckis objectMarckis = new ObjectMarckis(red1,green1,blue1);
                 anotherIntent.putExtra("image2", byteArray);
+                /*anotherIntent.putExtra("r1",red1);
+                anotherIntent.putExtra("g1",green1);
+                anotherIntent.putExtra("b1",blue1);*/
+                anotherIntent.putExtra("objUno",objectMarckis);
                 startActivity(anotherIntent);
                 finish();
-            }
-        });
-
-        enviarMar.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                validar();
             }
         });
 
@@ -141,13 +140,13 @@ public class MuestraMarckisActivity extends AppCompatActivity {
     }
 
 
-    //
-//public String ColorHex(int r,int g,int b){
-//String color = "";
-//color = "#";
-//color+=Integer.toHexString(r);
-//color+=Integer.toHexString(g);
-//color+=Integer.toHexString(b);
-//return color;
-//}
+
+        public String ColorHex(int r,int g,int b){
+            String color = "";
+            color = "#";
+            color+=Integer.toHexString(r);
+            color+=Integer.toHexString(g);
+            color+=Integer.toHexString(b);
+            return color;
+        }
 }

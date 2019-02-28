@@ -31,7 +31,6 @@ public class MuestraMeckeActivity extends AppCompatActivity {
 
         mec_rgb = findViewById(R.id.meckeRGB);
         mecke_nr = findViewById(R.id.mecke_nr);
-        enviarMecke = findViewById(R.id.btn_enviar_mec);
 
         imageMe = (ImageView) findViewById(R.id.imagen_mecke);
         Bitmap bmp2;
@@ -111,13 +110,6 @@ public class MuestraMeckeActivity extends AppCompatActivity {
             }
         });
 
-        enviarMecke.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                validar();
-            }
-        });
-
     }
 
     private void validar() {
@@ -137,7 +129,7 @@ public class MuestraMeckeActivity extends AppCompatActivity {
         intent.putExtra("mec_red", red2);
         intent.putExtra("mec_gre", green2);
         intent.putExtra("mec_blu", blue2);
-        //startActivity(intent);
+        startActivity(intent);
     }
 
 

@@ -4,18 +4,18 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
     android:background="@drawable/fondo"
+    android:orientation="vertical"
     tools:context=".MuestraSimonActivity">
 
     <ImageView
         android:id="@+id/imagen_simon"
         android:layout_width="0dp"
-        android:layout_height="362dp"
-        android:layout_marginStart="57dp"
-        android:layout_marginTop="54dp"
-        android:layout_marginEnd="57dp"
-        android:layout_marginBottom="19dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="51dp"
+        android:layout_marginEnd="30dp"
+        android:layout_marginBottom="8dp"
         android:contentDescription="@string/todo"
         app:layout_constraintBottom_toTopOf="@+id/tv_simon"
         app:layout_constraintEnd_toEndOf="parent"
@@ -27,13 +27,14 @@
         android:id="@+id/tv_simon"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="112dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginBottom="132dp"
         android:text="@string/muestra_simon"
         android:textAlignment="center"
         android:textColor="@color/primaryLightColor"
         android:textSize="18sp"
         android:textStyle="bold"
-        app:layout_constraintBottom_toTopOf="@+id/btn_enviar_sim"
+        app:layout_constraintBottom_toTopOf="@+id/btnResul"
         app:layout_constraintStart_toStartOf="@+id/rg_sim"
         app:layout_constraintTop_toBottomOf="@+id/imagen_simon" />
 
@@ -45,16 +46,11 @@
         app:layout_constraintBottom_toTopOf="@+id/btnResul"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imagen_simon">
+        app:layout_constraintTop_toBottomOf="@+id/imagen_simon"
+        app:layout_constraintVertical_bias="0.741">
 
         <RadioButton
             android:id="@+id/simonRGB"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="@string/radiobutton" />
-
-        <Space
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1" />
@@ -70,28 +66,17 @@
     </RadioGroup>
 
     <Button
-        android:id="@+id/btn_enviar_sim"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="30dp"
-        android:layout_marginEnd="30dp"
-        android:text="@string/registrar_muestra"
-        app:layout_constraintBottom_toTopOf="@+id/btnResul"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tv_simon" />
-
-    <Button
         android:id="@+id/btnResul"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginStart="30dp"
-        android:layout_marginEnd="30dp"
-        android:text="@string/pasar_a_mandelin"
+        android:layout_marginStart="29dp"
+        android:layout_marginEnd="29dp"
+        android:layout_marginBottom="25dp"
+        android:text="@string/resultados"
         app:layout_constraintBottom_toTopOf="@+id/btnSimVolver"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btn_enviar_sim" />
+        app:layout_constraintTop_toBottomOf="@+id/tv_simon" />
 
     <Button
         android:id="@+id/btnSimVolver"
@@ -99,7 +84,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="30dp"
         android:layout_marginEnd="30dp"
-        android:layout_marginBottom="49dp"
+        android:layout_marginBottom="45dp"
         android:text="@string/volver"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"

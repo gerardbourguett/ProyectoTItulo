@@ -12,10 +12,10 @@
         android:id="@+id/imagen_mandelin"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        android:layout_marginStart="57dp"
-        android:layout_marginTop="54dp"
-        android:layout_marginEnd="57dp"
-        android:layout_marginBottom="19dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="51dp"
+        android:layout_marginEnd="30dp"
+        android:layout_marginBottom="11dp"
         android:contentDescription="@string/todo"
         app:layout_constraintBottom_toTopOf="@+id/tv_mandelin"
         app:layout_constraintEnd_toEndOf="parent"
@@ -27,13 +27,13 @@
         android:id="@+id/tv_mandelin"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="112dp"
+        android:layout_marginBottom="122dp"
         android:text="@string/muestra_mandelin"
         android:textAlignment="center"
         android:textColor="@color/primaryLightColor"
         android:textSize="18sp"
         android:textStyle="bold"
-        app:layout_constraintBottom_toTopOf="@+id/btn_enviar_man"
+        app:layout_constraintBottom_toTopOf="@+id/btnSimon"
         app:layout_constraintStart_toStartOf="@+id/rg_man"
         app:layout_constraintTop_toBottomOf="@+id/imagen_mandelin" />
 
@@ -44,15 +44,16 @@
         android:layout_marginBottom="17dp"
         app:layout_constraintBottom_toTopOf="@+id/btnSimon"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.496"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imagen_mandelin">
+        app:layout_constraintTop_toBottomOf="@+id/imagen_mandelin"
+        app:layout_constraintVertical_bias="0.927">
 
         <RadioButton
             android:id="@+id/mandelinRGB"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="@string/radiobutton" />
+            android:layout_weight="1" />
 
         <Space
             android:layout_width="wrap_content"
@@ -70,28 +71,17 @@
     </RadioGroup>
 
     <Button
-        android:id="@+id/btn_enviar_man"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="30dp"
-        android:layout_marginEnd="30dp"
-        android:text="@string/registrar_muestra"
-        app:layout_constraintBottom_toTopOf="@+id/btnSimon"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tv_mandelin" />
-
-    <Button
         android:id="@+id/btnSimon"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="30dp"
         android:layout_marginEnd="30dp"
-        android:text="@string/pasar_a_mandelin"
+        android:layout_marginBottom="32dp"
+        android:text="@string/pasar_a_simon"
         app:layout_constraintBottom_toTopOf="@+id/btnManVolver"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btn_enviar_man" />
+        app:layout_constraintTop_toBottomOf="@+id/tv_mandelin" />
 
     <Button
         android:id="@+id/btnManVolver"
@@ -99,7 +89,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="30dp"
         android:layout_marginEnd="30dp"
-        android:layout_marginBottom="49dp"
+        android:layout_marginBottom="45dp"
         android:text="@string/volver"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"

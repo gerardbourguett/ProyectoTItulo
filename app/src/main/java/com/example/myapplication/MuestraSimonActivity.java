@@ -31,7 +31,6 @@ public class MuestraSimonActivity extends AppCompatActivity {
 
         mec_rgb = findViewById(R.id.simonRGB);
         mecke_nr = findViewById(R.id.sim_nr);
-        enviarMecke = findViewById(R.id.btn_enviar_sim);
 
         imageMe = (ImageView) findViewById(R.id.imagen_simon);
         Bitmap bmp4;
@@ -95,8 +94,9 @@ public class MuestraSimonActivity extends AppCompatActivity {
         continuarMandelin.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                validar();
 
-                imageMe.buildDrawingCache();
+                /*imageMe.buildDrawingCache();
                 Bitmap bitmap = imageMe.getDrawingCache();
 
                 ByteArrayOutputStream bStream = new ByteArrayOutputStream();
@@ -104,15 +104,8 @@ public class MuestraSimonActivity extends AppCompatActivity {
                 byte[] byteArray = bStream.toByteArray();
 
                 Intent anotherIntent = new Intent(getApplicationContext(), ResultadosActivity.class);
-                startActivity(anotherIntent);
+                startActivity(anotherIntent);*/
                 finish();
-            }
-        });
-
-        enviarMecke.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                validar();
             }
         });
 

@@ -58,7 +58,7 @@ public class CamaraActivity extends AppCompatActivity {
                 Bitmap bitmap = imageView.getDrawingCache();
 
                 ByteArrayOutputStream bStream = new ByteArrayOutputStream();
-                bitmap.compress(Bitmap.CompressFormat.PNG, 100, bStream);
+                bitmap.compress(Bitmap.CompressFormat.PNG, 0, bStream);
                 byte[] byteArray = bStream.toByteArray();
 
                 Intent anotherIntent = new Intent(getApplicationContext(), MuestraMarckisActivity.class);
@@ -85,9 +85,6 @@ public class CamaraActivity extends AppCompatActivity {
         Intent intent = new Intent(Intent.ACTION_PICK, MediaStore.Images.Media.EXTERNAL_CONTENT_URI);
         intent.setType("image/");
         startActivityForResult(Intent.createChooser(intent,"Seleccione la aplicación"),CODIGO_GALERIA);
-
-
-
     }
 
     @Override

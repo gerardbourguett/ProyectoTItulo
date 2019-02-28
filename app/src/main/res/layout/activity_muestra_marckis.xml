@@ -4,18 +4,18 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
     android:background="@drawable/fondo"
+    android:orientation="vertical"
     tools:context=".MuestraMarckisActivity">
 
     <ImageView
         android:id="@+id/imagen_marckis"
-        android:layout_width="0dp"
-        android:layout_height="356dp"
-        android:layout_marginStart="57dp"
-        android:layout_marginTop="54dp"
-        android:layout_marginEnd="57dp"
-        android:layout_marginBottom="19dp"
+        android:layout_width="400dp"
+        android:layout_height="400dp"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="3dp"
+        android:layout_marginEnd="5dp"
+        android:layout_marginBottom="16dp"
         android:contentDescription="@string/todo"
         app:layout_constraintBottom_toTopOf="@+id/tv_marckis"
         app:layout_constraintEnd_toEndOf="parent"
@@ -28,34 +28,28 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="3dp"
-        android:layout_marginBottom="112dp"
+        android:layout_marginBottom="27dp"
         android:text="@string/muestra_marckis"
         android:textAlignment="center"
         android:textColor="@color/primaryLightColor"
         android:textSize="18sp"
         android:textStyle="bold"
-        app:layout_constraintBottom_toTopOf="@+id/btn_enviar_mar"
+        app:layout_constraintBottom_toTopOf="@+id/rg_mar"
         app:layout_constraintStart_toStartOf="@+id/rg_mar"
         app:layout_constraintTop_toBottomOf="@+id/imagen_marckis" />
 
     <RadioGroup
         android:id="@+id/rg_mar"
         android:layout_width="145dp"
-        android:layout_height="85dp"
-        android:layout_marginBottom="17dp"
+        android:layout_height="80dp"
+        android:layout_marginBottom="26dp"
         app:layout_constraintBottom_toTopOf="@+id/btnMecke"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imagen_marckis">
+        app:layout_constraintTop_toBottomOf="@+id/tv_marckis">
 
         <RadioButton
             android:id="@+id/marckisRGB"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="@string/radiobutton" />
-
-        <Space
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1" />
@@ -71,28 +65,17 @@
     </RadioGroup>
 
     <Button
-        android:id="@+id/btn_enviar_mar"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="30dp"
-        android:layout_marginEnd="30dp"
-        android:text="@string/registrar_muestra"
-        app:layout_constraintBottom_toTopOf="@+id/btnMecke"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tv_marckis" />
-
-    <Button
         android:id="@+id/btnMecke"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginStart="30dp"
-        android:layout_marginEnd="30dp"
+        android:layout_marginStart="27dp"
+        android:layout_marginEnd="27dp"
+        android:layout_marginBottom="17dp"
         android:text="@string/pasar_a_mecke"
         app:layout_constraintBottom_toTopOf="@+id/btnMarVolver"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btn_enviar_mar" />
+        app:layout_constraintTop_toBottomOf="@+id/rg_mar" />
 
     <Button
         android:id="@+id/btnMarVolver"
@@ -100,7 +83,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="30dp"
         android:layout_marginEnd="30dp"
-        android:layout_marginBottom="49dp"
+        android:layout_marginBottom="37dp"
         android:text="@string/volver"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
