@@ -73,14 +73,14 @@ public class MuestraMarckisActivity extends AppCompatActivity {
                     int b = Color.blue(pixel);
                     
                     mar_rgb.setBackgroundColor(Color.rgb(r,g,b));
-                    //mar_rgb.setText("RGB ("+r+","+g+","+b+")");
+                    mar_rgb.setText("Pinche en la imagen");
 
                     red1 = String.valueOf(r);
                     green1 = String.valueOf(g);
                     blue1 = String.valueOf(b);
 
 
-                    String c = ColorHex(r,g,b);
+                    //String c = ColorHex(r,g,b);
                     //hexView.setText(c);
                     //olor.setBackgroundColor(android.graphics.Color.rgb(r,g,b));
 
@@ -111,7 +111,7 @@ public class MuestraMarckisActivity extends AppCompatActivity {
                 /*anotherIntent.putExtra("r1",red1);
                 anotherIntent.putExtra("g1",green1);
                 anotherIntent.putExtra("b1",blue1);*/
-                anotherIntent.putExtra("objUno",objectMarckis);
+                //anotherIntent.putExtra("objUno",objectMarckis);
                 startActivity(anotherIntent);
                 finish();
             }
@@ -129,7 +129,7 @@ public class MuestraMarckisActivity extends AppCompatActivity {
             res = "NO REACTION";
         }
 
-        Toast.makeText(getApplicationContext(), "Muestra Registrada", Toast.LENGTH_SHORT).show();
+        Toast.makeText(getApplicationContext(), "Muestra Marckis Registrada", Toast.LENGTH_SHORT).show();
 
         Intent intent = new Intent(getApplicationContext(), ResultadosActivity.class);
 

@@ -23,4 +23,10 @@
     <string name="r">R</string>
     <string name="b">B</string>
     <string name="g">G</string>
+    <string name="mandelin">Mandelin</string>
+    <string name="simon">Simon</string>
+    <string name="mecke">Mecke</string>
+    <string name="marckis">Marckis</string>
+    <string name="boton">boton</string>
+    <string name="tomar_foto">Tomar Foto</string>
 </resources>

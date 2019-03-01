@@ -1,6 +1,14 @@
 apply plugin: 'com.android.application'
 
 android {
+    signingConfigs {
+        config {
+            keyAlias 'FCC'
+            keyPassword 'app_fcc'
+            storeFile file('C:/Users/gabc_/Apps/AppColorimetria.jks')
+            storePassword 'app_fcc'
+        }
+    }
     compileSdkVersion 28
     defaultConfig {
         applicationId "com.example.myapplication"
@@ -14,12 +22,16 @@ android {
         release {
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+            signingConfig signingConfigs.config
+            aaptOptions.cruncherEnabled=false // here minifyEnabled enableProguardInReleaseBuilds proguardFiles getDefaultProguardFile("proguard-android.txt"), "proguard-rules.pro" signingConfig signingConfigs.release
         }
     }
+
+
 }
 
 dependencies {
-    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
     implementation 'com.android.support:appcompat-v7:28.0.0'
     implementation 'com.android.support.constraint:constraint-layout:1.1.3'
     testImplementation 'junit:junit:4.12'

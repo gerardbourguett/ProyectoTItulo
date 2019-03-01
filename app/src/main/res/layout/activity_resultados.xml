@@ -9,198 +9,129 @@
     tools:context=".ResultadosActivity">
 
     <TextView
+        android:id="@+id/colorMandelin"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="316dp"
+        android:textAlignment="center"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/colorSimon"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_mandelin" />
+
+    <TextView
+        android:id="@+id/colorSimon"
+        android:layout_width="0dp"
+        android:layout_height="33dp"
+        android:layout_marginTop="136dp"
+        android:layout_marginEnd="8dp"
+        android:textAlignment="center"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/colorMandelin"
+        app:layout_constraintTop_toTopOf="@+id/colorMarckis" />
+
+    <TextView
+        android:id="@+id/colorMecke"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="453dp"
+        android:textAlignment="center"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/colorMarckis"
+        app:layout_constraintTop_toBottomOf="@+id/tv_Mecke" />
+
+    <TextView
         android:id="@+id/tv_Resultados"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="91dp"
-        android:layout_marginEnd="27dp"
+        android:layout_marginBottom="81dp"
         android:text="@string/resultados"
         android:textAlignment="center"
         android:textColor="@color/primaryLightColor"
         android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="@+id/tv_greenmar"
+        app:layout_constraintBottom_toTopOf="@+id/tv_marckis"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/tv_redmar"
+        android:id="@+id/tv_marckis"
         android:layout_width="0dp"
-        android:layout_height="wrap_content"
+        android:layout_height="0dp"
         android:layout_marginStart="8dp"
         android:layout_marginEnd="8dp"
-        android:text="@string/r"
+        android:layout_marginBottom="20dp"
+        android:text="@string/marckis"
         android:textAlignment="center"
         android:textColor="@color/primaryLightColor"
         android:textStyle="bold"
-        app:layout_constraintBaseline_toBaselineOf="@+id/tv_greenmar"
-        app:layout_constraintEnd_toStartOf="@+id/tv_greenmar"
-        app:layout_constraintStart_toStartOf="parent" />
-
-    <TextView
-        android:id="@+id/tv_greenmar"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="81dp"
-        android:layout_marginEnd="9dp"
-        android:text="@string/g"
-        android:textAlignment="center"
-        android:textColor="@color/primaryLightColor"
-        android:textStyle="bold"
-        app:layout_constraintEnd_toStartOf="@+id/tv_bluemar"
-        app:layout_constraintStart_toEndOf="@+id/tv_redmar"
+        app:layout_constraintBottom_toTopOf="@+id/colorMarckis"
+        app:layout_constraintEnd_toStartOf="@+id/tv_Mecke"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tv_Resultados" />
 
     <TextView
-        android:id="@+id/tv_bluemar"
+        android:id="@+id/colorMarckis"
         android:layout_width="0dp"
-        android:layout_height="wrap_content"
+        android:layout_height="0dp"
+        android:layout_marginStart="8dp"
         android:layout_marginEnd="8dp"
-        android:text="@string/b"
+        android:layout_marginBottom="49dp"
+        android:textAlignment="center"
+        app:layout_constraintBottom_toTopOf="@+id/tv_mandelin"
+        app:layout_constraintEnd_toStartOf="@+id/colorMecke"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_marckis" />
+
+    <TextView
+        android:id="@+id/tv_Mecke"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="191dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="23dp"
+        android:text="@string/mecke"
         android:textAlignment="center"
         android:textColor="@color/primaryLightColor"
         android:textStyle="bold"
-        app:layout_constraintBaseline_toBaselineOf="@+id/tv_greenmar"
+        app:layout_constraintBottom_toTopOf="@+id/colorMecke"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/tv_greenmar" />
+        app:layout_constraintStart_toEndOf="@+id/tv_marckis"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/marR"
+        android:id="@+id/tv_simon"
         android:layout_width="0dp"
-        android:layout_height="wrap_content"
+        android:layout_height="31dp"
+        android:layout_marginEnd="8dp"
+        android:text="@string/simon"
+        android:textAlignment="center"
+        android:textColor="@color/primaryLightColor"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/tv_mandelin"
+        app:layout_constraintTop_toTopOf="@+id/tv_mandelin" />
+
+    <TextView
+        android:id="@+id/tv_mandelin"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
         android:layout_marginStart="8dp"
         android:layout_marginEnd="8dp"
+        android:layout_marginBottom="21dp"
+        android:text="@string/mandelin"
         android:textAlignment="center"
         android:textColor="@color/primaryLightColor"
-        app:layout_constraintBaseline_toBaselineOf="@+id/marG"
-        app:layout_constraintEnd_toStartOf="@+id/marG"
-        app:layout_constraintStart_toStartOf="parent" />
-
-    <TextView
-        android:id="@+id/marG"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="26dp"
-        android:layout_marginEnd="9dp"
-        android:textAlignment="center"
-        android:textColor="@color/primaryLightColor"
-        app:layout_constraintEnd_toStartOf="@+id/marB"
-        app:layout_constraintStart_toEndOf="@+id/marR"
-        app:layout_constraintTop_toBottomOf="@+id/tv_greenmar" />
-
-    <TextView
-        android:id="@+id/marB"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginEnd="8dp"
-        android:textAlignment="center"
-        android:textColor="@color/primaryLightColor"
-        app:layout_constraintBaseline_toBaselineOf="@+id/marG"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/marG" />
-
-    <TextView
-        android:id="@+id/mecR"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginEnd="8dp"
-        android:textAlignment="center"
-        android:textColor="@color/primaryLightColor"
-        app:layout_constraintBaseline_toBaselineOf="@+id/mecG"
-        app:layout_constraintEnd_toStartOf="@+id/mecG"
-        app:layout_constraintStart_toStartOf="parent" />
-
-    <TextView
-        android:id="@+id/mecG"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="24dp"
-        android:layout_marginEnd="9dp"
-        android:textAlignment="center"
-        android:textColor="@color/primaryLightColor"
-        app:layout_constraintEnd_toStartOf="@+id/mecB"
-        app:layout_constraintStart_toEndOf="@+id/mecR"
-        app:layout_constraintTop_toBottomOf="@+id/marG" />
-
-    <TextView
-        android:id="@+id/mecB"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginEnd="7dp"
-        android:textAlignment="center"
-        android:textColor="@color/primaryLightColor"
-        app:layout_constraintBaseline_toBaselineOf="@+id/mecG"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/mecG" />
-
-    <TextView
-        android:id="@+id/manR"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginEnd="8dp"
-        android:textAlignment="center"
-        android:textColor="@color/primaryLightColor"
-        app:layout_constraintBaseline_toBaselineOf="@+id/manG"
-        app:layout_constraintEnd_toStartOf="@+id/manG"
-        app:layout_constraintStart_toStartOf="parent" />
-
-    <TextView
-        android:id="@+id/manG"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="25dp"
-        android:layout_marginEnd="9dp"
-        android:textAlignment="center"
-        android:textColor="@color/primaryLightColor"
-        app:layout_constraintEnd_toStartOf="@+id/manB"
-        app:layout_constraintStart_toEndOf="@+id/manR"
-        app:layout_constraintTop_toBottomOf="@+id/mecG" />
-
-    <TextView
-        android:id="@+id/manB"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginEnd="8dp"
-        android:textAlignment="center"
-        android:textColor="@color/primaryLightColor"
-        app:layout_constraintBaseline_toBaselineOf="@+id/manG"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/manG" />
-
-    <TextView
-        android:id="@+id/simR"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginEnd="8dp"
-        android:textAlignment="center"
-        android:textColor="@color/primaryLightColor"
-        app:layout_constraintBaseline_toBaselineOf="@+id/simG"
-        app:layout_constraintEnd_toStartOf="@+id/simG"
-        app:layout_constraintStart_toStartOf="parent" />
-
-    <TextView
-        android:id="@+id/simG"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="24dp"
-        android:layout_marginEnd="8dp"
-        android:textAlignment="center"
-        android:textColor="@color/primaryLightColor"
-        app:layout_constraintEnd_toStartOf="@+id/simB"
-        app:layout_constraintStart_toEndOf="@+id/simR"
-        app:layout_constraintTop_toBottomOf="@+id/manG" />
-
-    <TextView
-        android:id="@+id/simB"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginEnd="8dp"
-        android:textAlignment="center"
-        android:textColor="@color/primaryLightColor"
-        app:layout_constraintBaseline_toBaselineOf="@+id/simG"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/simG" />
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/colorMandelin"
+        app:layout_constraintEnd_toStartOf="@+id/tv_simon"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/colorMarckis" />
 
 
 </android.support.constraint.ConstraintLayout>

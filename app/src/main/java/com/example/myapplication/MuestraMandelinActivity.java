@@ -18,7 +18,7 @@ import java.io.ByteArrayOutputStream;
 
 public class MuestraMandelinActivity extends AppCompatActivity {
 
-    Button vol_mandelin_inicio, continuarSimon, enviarSimon;
+    Button vol_mandelin_inicio, continuarSimon;
     ImageView imageMan;
     RadioButton man_rgb, mandelin_nr;
     String red3, green3, blue3;
@@ -70,8 +70,8 @@ public class MuestraMandelinActivity extends AppCompatActivity {
                     int g = Color.green(pixel);
                     int b = Color.blue(pixel);
 
-                    //textView.setBackgroundColor(Color.rgb(r,g,b));
-                    man_rgb.setText("RGB ("+r+","+g+","+b+")");
+                    man_rgb.setBackgroundColor(Color.rgb(r,g,b));
+                    man_rgb.setText("Pinche en la imagen");
 
                     red3 = String.valueOf(r);
                     green3 = String.valueOf(g);
@@ -125,11 +125,11 @@ public class MuestraMandelinActivity extends AppCompatActivity {
 
         Toast.makeText(getApplicationContext(), "Muestra Registrada", Toast.LENGTH_SHORT).show();
 
-        /*Intent intent = new Intent(getApplicationContext(), ResultadosActivity.class);
+        Intent intent = new Intent(getApplicationContext(), ResultadosActivity.class);
 
         intent.putExtra("man_red", red3);
         intent.putExtra("man_gre", green3);
-        intent.putExtra("man_blu", blue3);*/
-        //startActivity(intent);
+        intent.putExtra("man_blu", blue3);
+        startActivity(intent);
     }
 }

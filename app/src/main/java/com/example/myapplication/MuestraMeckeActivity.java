@@ -21,7 +21,7 @@ public class MuestraMeckeActivity extends AppCompatActivity {
     Button vol_Mecke_inicio, continuarMandelin, enviarMecke;
     ImageView imageMe;
     RadioButton mec_rgb, mecke_nr;
-    String red2, green2, blue2;
+    int red2, green2, blue2;
 
     @SuppressLint("ClickableViewAccessibility")
     @Override
@@ -70,18 +70,18 @@ public class MuestraMeckeActivity extends AppCompatActivity {
                     int g = Color.green(pixel);
                     int b = Color.blue(pixel);
 
-                    //textView.setBackgroundColor(Color.rgb(r,g,b));
-                    mec_rgb.setText("RGB ("+r+","+g+","+b+")");
+                    mec_rgb.setBackgroundColor(Color.rgb(r,g,b));
+                    mec_rgb.setText("Pinche en la imagen");
 
-                    red2 = String.valueOf(r);
-                    green2 = String.valueOf(g);
-                    blue2 = String.valueOf(b);
+                    red2 = r;
+                    green2 = g;
+                    blue2 = b;
 
-                    /*
-                    String c = ColorHex(r,g,b);
+
+                    /*String c = ColorHex(r,g,b);
                     hexView.setText(c);
-                    color.setBackgroundColor(android.graphics.Color.rgb(r,g,b));
-                    */
+                    color.setBackgroundColor(android.graphics.Color.rgb(r,g,b));*/
+
 
                 }
 
@@ -100,7 +100,7 @@ public class MuestraMeckeActivity extends AppCompatActivity {
                 Bitmap bitmap = imageMe.getDrawingCache();
 
                 ByteArrayOutputStream bStream = new ByteArrayOutputStream();
-                bitmap.compress(Bitmap.CompressFormat.PNG, 0, bStream);
+                bitmap.compress(Bitmap.CompressFormat.PNG, 100, bStream);
                 byte[] byteArray = bStream.toByteArray();
 
                 Intent anotherIntent = new Intent(MuestraMeckeActivity.this, MuestraMandelinActivity.class);
@@ -133,13 +133,12 @@ public class MuestraMeckeActivity extends AppCompatActivity {
     }
 
 
-    //
-//public String ColorHex(int r,int g,int b){
-//String color = "";
-//color = "#";
-//color+=Integer.toHexString(r);
-//color+=Integer.toHexString(g);
-//color+=Integer.toHexString(b);
-//return color;
-//}
+    public String ColorHex(int r,int g,int b){
+        String color = "";
+        color = "#";
+        color+=Integer.toHexString(r);
+        color+=Integer.toHexString(g);
+        color+=Integer.toHexString(b);
+        return color;
+    }
 }

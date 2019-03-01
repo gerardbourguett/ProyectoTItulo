@@ -10,51 +10,49 @@
 
     <ImageView
         android:id="@+id/imagen_mecke"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
+        android:layout_width="350dp"
+        android:layout_height="350dp"
         android:layout_marginStart="30dp"
-        android:layout_marginTop="45dp"
         android:layout_marginEnd="30dp"
-        android:layout_marginBottom="13dp"
+        android:layout_marginBottom="21dp"
         android:contentDescription="@string/todo"
-        app:layout_constraintBottom_toTopOf="@+id/tv_mecke"
+        app:layout_constraintBottom_toTopOf="@+id/rg_mec"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_mecke"
         app:srcCompat="@drawable/img_base" />
 
     <TextView
         android:id="@+id/tv_mecke"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="9dp"
-        android:layout_marginBottom="124dp"
+        android:layout_marginTop="6dp"
+        android:layout_marginBottom="19dp"
         android:text="@string/muestra_mecke"
         android:textAlignment="center"
         android:textColor="@color/primaryLightColor"
         android:textSize="18sp"
         android:textStyle="bold"
-        app:layout_constraintBottom_toTopOf="@+id/btnMandelin"
-        app:layout_constraintStart_toStartOf="@+id/rg_mec"
-        app:layout_constraintTop_toBottomOf="@+id/imagen_mecke" />
+        app:layout_constraintBottom_toTopOf="@+id/imagen_mecke"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <RadioGroup
         android:id="@+id/rg_mec"
         android:layout_width="145dp"
-        android:layout_height="85dp"
-        android:layout_marginBottom="17dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="20dp"
         app:layout_constraintBottom_toTopOf="@+id/btnMandelin"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imagen_mecke"
-        app:layout_constraintVertical_bias="0.898">
+        app:layout_constraintTop_toBottomOf="@+id/imagen_mecke">
 
         <RadioButton
             android:id="@+id/meckeRGB"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="@string/radiobutton" />
+            android:layout_weight="1" />
 
         <RadioButton
             android:id="@+id/mecke_nr"
@@ -70,14 +68,14 @@
         android:id="@+id/btnMandelin"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginStart="29dp"
-        android:layout_marginEnd="29dp"
-        android:layout_marginBottom="34dp"
+        android:layout_marginStart="28dp"
+        android:layout_marginEnd="28dp"
+        android:layout_marginBottom="13dp"
         android:text="@string/pasar_a_mandelin"
         app:layout_constraintBottom_toTopOf="@+id/btnMecVolver"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tv_mecke" />
+        app:layout_constraintTop_toBottomOf="@+id/rg_mec" />
 
     <Button
         android:id="@+id/btnMecVolver"
@@ -85,7 +83,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="30dp"
         android:layout_marginEnd="30dp"
-        android:layout_marginBottom="45dp"
+        android:layout_marginBottom="25dp"
         android:text="@string/volver"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"

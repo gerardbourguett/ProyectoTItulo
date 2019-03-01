@@ -18,10 +18,10 @@ import java.io.ByteArrayOutputStream;
 
 public class MuestraSimonActivity extends AppCompatActivity {
 
-    Button vol_Mecke_inicio, continuarMandelin, enviarMecke;
-    ImageView imageMe;
-    RadioButton mec_rgb, mecke_nr;
-    String red2, green2, blue2;
+    Button vol_simon_inicio, continuarResultado, enviarMecke;
+    ImageView imageSim;
+    RadioButton sim_rgb, simon_nr;
+    String red4, green4, blue4;
 
     @SuppressLint("ClickableViewAccessibility")
     @Override
@@ -29,10 +29,10 @@ public class MuestraSimonActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_muestra_simon);
 
-        mec_rgb = findViewById(R.id.simonRGB);
-        mecke_nr = findViewById(R.id.sim_nr);
+        sim_rgb = findViewById(R.id.simonRGB);
+        simon_nr = findViewById(R.id.sim_nr);
 
-        imageMe = (ImageView) findViewById(R.id.imagen_simon);
+        imageSim = (ImageView) findViewById(R.id.imagen_simon);
         Bitmap bmp4;
 
         byte[] byteArray4 = getIntent().getByteArrayExtra("image4");
@@ -42,12 +42,12 @@ public class MuestraSimonActivity extends AppCompatActivity {
 
         if (bundle!=null){
             int image = bundle.getInt("image4");
-            imageMe.setImageBitmap(bmp4);
+            imageSim.setImageBitmap(bmp4);
         }
 
-        vol_Mecke_inicio = findViewById(R.id.btnSimVolver);
+        vol_simon_inicio = findViewById(R.id.btnSimVolver);
 
-        vol_Mecke_inicio.setOnClickListener(new View.OnClickListener() {
+        vol_simon_inicio.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(getApplicationContext(), CamaraActivity.class);
@@ -55,27 +55,27 @@ public class MuestraSimonActivity extends AppCompatActivity {
             }
         });
 
-        imageMe.setDrawingCacheEnabled(true);
-        imageMe.buildDrawingCache(true);
+        imageSim.setDrawingCacheEnabled(true);
+        imageSim.buildDrawingCache(true);
 
-        imageMe.setOnTouchListener(new View.OnTouchListener() {
+        imageSim.setOnTouchListener(new View.OnTouchListener() {
             @Override
             public boolean onTouch(View v, MotionEvent event) {
                 if(event.getAction() == MotionEvent.ACTION_DOWN ||
                         event.getAction() == MotionEvent.ACTION_MOVE){
-                    Bitmap bitmap = imageMe.getDrawingCache();
+                    Bitmap bitmap = imageSim.getDrawingCache();
                     int pixel = bitmap.getPixel((int) event.getX(), (int) event.getY());
 
                     int r = Color.red(pixel);
                     int g = Color.green(pixel);
                     int b = Color.blue(pixel);
 
-                    //textView.setBackgroundColor(Color.rgb(r,g,b));
-                    mec_rgb.setText("RGB ("+r+","+g+","+b+")");
+                    sim_rgb.setBackgroundColor(Color.rgb(r,g,b));
+                    sim_rgb.setText("Pinche en la imagen");
 
-                    red2 = String.valueOf(r);
-                    green2 = String.valueOf(g);
-                    blue2 = String.valueOf(b);
+                    red4 = String.valueOf(r);
+                    green4 = String.valueOf(g);
+                    blue4 = String.valueOf(b);
 
                     /*
                     String c = ColorHex(r,g,b);
@@ -89,9 +89,9 @@ public class MuestraSimonActivity extends AppCompatActivity {
             }
         });
 
-        continuarMandelin = findViewById(R.id.btnResul);
+        continuarResultado = findViewById(R.id.btnResul);
 
-        continuarMandelin.setOnClickListener(new View.OnClickListener() {
+        continuarResultado.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 validar();
@@ -101,10 +101,10 @@ public class MuestraSimonActivity extends AppCompatActivity {
 
                 ByteArrayOutputStream bStream = new ByteArrayOutputStream();
                 bitmap.compress(Bitmap.CompressFormat.PNG, 100, bStream);
-                byte[] byteArray = bStream.toByteArray();
+                byte[] byteArray = bStream.toByteArray();*/
 
                 Intent anotherIntent = new Intent(getApplicationContext(), ResultadosActivity.class);
-                startActivity(anotherIntent);*/
+                startActivity(anotherIntent);
                 finish();
             }
         });
@@ -114,20 +114,20 @@ public class MuestraSimonActivity extends AppCompatActivity {
     private void validar() {
         String res = "";
 
-        if(mec_rgb.isChecked()){
-            res = (String) mec_rgb.getText();
+        if(sim_rgb.isChecked()){
+            res = (String) sim_rgb.getText();
         }
-        if (mecke_nr.isChecked()){
+        if (simon_nr.isChecked()){
             res = "NO REACTION";
         }
 
-        Toast.makeText(getApplicationContext(), "Muestra Registrada", Toast.LENGTH_SHORT).show();
+        Toast.makeText(getApplicationContext(), "Muestra Simon Registrada", Toast.LENGTH_SHORT).show();
 
-        /*Intent intent = new Intent(getApplicationContext(), ResultadosActivity.class);
+        Intent intent = new Intent(getApplicationContext(), ResultadosActivity.class);
 
-        intent.putExtra("sim_red", red2);
-        intent.putExtra("sim_gre", green2);
-        intent.putExtra("sim_blu", blue2);*/
-        //startActivity(intent);
+        intent.putExtra("sim_red", red4);
+        intent.putExtra("sim_gre", green4);
+        intent.putExtra("sim_blu", blue4);
+        startActivity(intent);
     }
 }
