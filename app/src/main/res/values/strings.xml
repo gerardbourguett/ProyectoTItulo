@@ -29,4 +29,7 @@
     <string name="marckis">Marckis</string>
     <string name="boton">boton</string>
     <string name="tomar_foto">Tomar Foto</string>
+    <string name="muestra">Muestra</string>
+    <string name="coincidencias">Coincidencias</string>
+    <string name="capture">CAPTURE</string>
 </resources>

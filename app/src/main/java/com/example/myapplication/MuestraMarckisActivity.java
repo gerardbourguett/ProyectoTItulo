@@ -7,15 +7,12 @@ import android.graphics.BitmapFactory;
 import android.graphics.Color;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.MotionEvent;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.RadioButton;
-import android.widget.Toast;
-
-import com.example.myapplication.objeto.ObjectMarckis;
-
 import java.io.ByteArrayOutputStream;
 
 public class MuestraMarckisActivity extends AppCompatActivity {
@@ -24,6 +21,7 @@ public class MuestraMarckisActivity extends AppCompatActivity {
     ImageView imageMa;
     RadioButton mar_rgb, marckis_nr;
     String red1, green1, blue1;
+    int r1,g1,b1;
 
     @SuppressLint("ClickableViewAccessibility")
     @Override
@@ -79,6 +77,11 @@ public class MuestraMarckisActivity extends AppCompatActivity {
                     green1 = String.valueOf(g);
                     blue1 = String.valueOf(b);
 
+                    r1 = r;
+                    g1 = g;
+                    b1 = b;
+                    Log.d("marckis"," "+red1+" "+green1+" "+blue1);
+
 
                     //String c = ColorHex(r,g,b);
                     //hexView.setText(c);
@@ -106,12 +109,10 @@ public class MuestraMarckisActivity extends AppCompatActivity {
 
                 Intent anotherIntent = new Intent(MuestraMarckisActivity.this, MuestraMeckeActivity.class);
 
-                ObjectMarckis objectMarckis = new ObjectMarckis(red1,green1,blue1);
                 anotherIntent.putExtra("image2", byteArray);
-                /*anotherIntent.putExtra("r1",red1);
-                anotherIntent.putExtra("g1",green1);
-                anotherIntent.putExtra("b1",blue1);*/
-                //anotherIntent.putExtra("objUno",objectMarckis);
+                anotherIntent.putExtra("r1",r1);
+                anotherIntent.putExtra("g1",g1);
+                anotherIntent.putExtra("b1",b1);
                 startActivity(anotherIntent);
                 finish();
             }
@@ -127,16 +128,19 @@ public class MuestraMarckisActivity extends AppCompatActivity {
         }
         if (marckis_nr.isChecked()){
             res = "NO REACTION";
+            r1 = 256;
+            g1 = 256;
+            b1 = 256;
         }
 
-        Toast.makeText(getApplicationContext(), "Muestra Marckis Registrada", Toast.LENGTH_SHORT).show();
+        //Toast.makeText(getApplicationContext(), "Muestra Marckis Registrada", Toast.LENGTH_SHORT).show();
 
-        Intent intent = new Intent(getApplicationContext(), ResultadosActivity.class);
+        /*Intent intent = new Intent(getApplicationContext(), ResultadosActivity.class);
 
-        intent.putExtra("mar_red", red1);
-        intent.putExtra("mar_gre", green1);
-        intent.putExtra("mar_blu", blue1);
-        startActivity(intent);
+        intent.putExtra("mar_red", r1);
+        intent.putExtra("mar_gre", g1);
+        intent.putExtra("mar_blu", b1);
+        startActivity(intent);*/
     }
 
 

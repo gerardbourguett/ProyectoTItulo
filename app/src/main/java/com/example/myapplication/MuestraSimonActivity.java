@@ -21,7 +21,8 @@ public class MuestraSimonActivity extends AppCompatActivity {
     Button vol_simon_inicio, continuarResultado, enviarMecke;
     ImageView imageSim;
     RadioButton sim_rgb, simon_nr;
-    String red4, green4, blue4;
+    int red4, green4, blue4;
+    private int rojo1,rojo2,rojo3,verde1,verde2,verde3,azul1,azul2,azul3;
 
     @SuppressLint("ClickableViewAccessibility")
     @Override
@@ -43,6 +44,18 @@ public class MuestraSimonActivity extends AppCompatActivity {
         if (bundle!=null){
             int image = bundle.getInt("image4");
             imageSim.setImageBitmap(bmp4);
+
+            rojo1 = bundle.getInt("r1");
+            verde1 = bundle.getInt("g1");
+            azul1 = bundle.getInt("b1");
+
+            rojo2 = bundle.getInt("r2");
+            verde2 = bundle.getInt("g2");
+            azul2 = bundle.getInt("b2");
+
+            rojo3 = bundle.getInt("r3");
+            verde3 = bundle.getInt("g3");
+            azul3 = bundle.getInt("b3");
         }
 
         vol_simon_inicio = findViewById(R.id.btnSimVolver);
@@ -73,9 +86,9 @@ public class MuestraSimonActivity extends AppCompatActivity {
                     sim_rgb.setBackgroundColor(Color.rgb(r,g,b));
                     sim_rgb.setText("Pinche en la imagen");
 
-                    red4 = String.valueOf(r);
-                    green4 = String.valueOf(g);
-                    blue4 = String.valueOf(b);
+                    red4 = r;
+                    green4 = g;
+                    blue4 = b;
 
                     /*
                     String c = ColorHex(r,g,b);
@@ -104,6 +117,24 @@ public class MuestraSimonActivity extends AppCompatActivity {
                 byte[] byteArray = bStream.toByteArray();*/
 
                 Intent anotherIntent = new Intent(getApplicationContext(), ResultadosActivity.class);
+
+                anotherIntent.putExtra("r1",rojo1);
+                anotherIntent.putExtra("g1",verde1);
+                anotherIntent.putExtra("b1",azul1);
+
+                anotherIntent.putExtra("r2",rojo2);
+                anotherIntent.putExtra("g2",verde2);
+                anotherIntent.putExtra("b2",azul2);
+
+                anotherIntent.putExtra("r3",rojo3);
+                anotherIntent.putExtra("g3",verde3);
+                anotherIntent.putExtra("b3",azul3);
+
+                anotherIntent.putExtra("r4",red4);
+                anotherIntent.putExtra("g4",green4);
+                anotherIntent.putExtra("b4",blue4);
+
+
                 startActivity(anotherIntent);
                 finish();
             }
@@ -119,15 +150,18 @@ public class MuestraSimonActivity extends AppCompatActivity {
         }
         if (simon_nr.isChecked()){
             res = "NO REACTION";
+            red4 = 256;
+            green4 = 256;
+            blue4 = 256;
         }
 
-        Toast.makeText(getApplicationContext(), "Muestra Simon Registrada", Toast.LENGTH_SHORT).show();
+        /*Toast.makeText(getApplicationContext(), "Muestra Simon Registrada", Toast.LENGTH_SHORT).show();
 
         Intent intent = new Intent(getApplicationContext(), ResultadosActivity.class);
 
         intent.putExtra("sim_red", red4);
         intent.putExtra("sim_gre", green4);
         intent.putExtra("sim_blu", blue4);
-        startActivity(intent);
+        startActivity(intent);*/
     }
 }

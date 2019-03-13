@@ -23,7 +23,8 @@ android {
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
             signingConfig signingConfigs.config
-            aaptOptions.cruncherEnabled=false // here minifyEnabled enableProguardInReleaseBuilds proguardFiles getDefaultProguardFile("proguard-android.txt"), "proguard-rules.pro" signingConfig signingConfigs.release
+            aaptOptions.cruncherEnabled = false
+            // here minifyEnabled enableProguardInReleaseBuilds proguardFiles getDefaultProguardFile("proguard-android.txt"), "proguard-rules.pro" signingConfig signingConfigs.release
         }
     }
 
@@ -31,6 +32,7 @@ android {
 }
 
 dependencies {
+    implementation 'net.steamcrafted:materialiconlib:1.1.5'
     implementation fileTree(include: ['*.jar'], dir: 'libs')
     implementation 'com.android.support:appcompat-v7:28.0.0'
     implementation 'com.android.support.constraint:constraint-layout:1.1.3'

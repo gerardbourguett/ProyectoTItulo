@@ -21,7 +21,8 @@ public class MuestraMandelinActivity extends AppCompatActivity {
     Button vol_mandelin_inicio, continuarSimon;
     ImageView imageMan;
     RadioButton man_rgb, mandelin_nr;
-    String red3, green3, blue3;
+    int red3, green3, blue3;
+    private int rojo1,rojo2,rojo3,verde1,verde2,verde3,azul1,azul2,azul3;
 
     @SuppressLint("ClickableViewAccessibility")
     @Override
@@ -43,6 +44,14 @@ public class MuestraMandelinActivity extends AppCompatActivity {
         if (bundle!=null){
             int image = bundle.getInt("image3");
             imageMan.setImageBitmap(bmp3);
+
+            rojo1 = bundle.getInt("r1");
+            verde1 = bundle.getInt("g1");
+            azul1 = bundle.getInt("b1");
+
+            rojo2 = bundle.getInt("r2");
+            verde2 = bundle.getInt("g2");
+            azul2 = bundle.getInt("b2");
         }
 
         vol_mandelin_inicio = findViewById(R.id.btnManVolver);
@@ -73,9 +82,9 @@ public class MuestraMandelinActivity extends AppCompatActivity {
                     man_rgb.setBackgroundColor(Color.rgb(r,g,b));
                     man_rgb.setText("Pinche en la imagen");
 
-                    red3 = String.valueOf(r);
-                    green3 = String.valueOf(g);
-                    blue3 = String.valueOf(b);
+                    red3 = r;
+                    green3 = g;
+                    blue3 = b;
 
                     /*
                     String c = ColorHex(r,g,b);
@@ -105,6 +114,21 @@ public class MuestraMandelinActivity extends AppCompatActivity {
 
                 Intent anotherIntent = new Intent(MuestraMandelinActivity.this, MuestraSimonActivity.class);
                 anotherIntent.putExtra("image4", byteArray);
+
+                anotherIntent.putExtra("r1",rojo1);
+                anotherIntent.putExtra("g1",verde1);
+                anotherIntent.putExtra("b1",azul1);
+
+                anotherIntent.putExtra("r2",rojo2);
+                anotherIntent.putExtra("g2",verde2);
+                anotherIntent.putExtra("b2",azul2);
+
+                anotherIntent.putExtra("r3",red3);
+                anotherIntent.putExtra("g3",green3);
+                anotherIntent.putExtra("b3",blue3);
+
+
+
                 startActivity(anotherIntent);
                 finish();
             }
@@ -121,15 +145,17 @@ public class MuestraMandelinActivity extends AppCompatActivity {
         }
         if (mandelin_nr.isChecked()){
             res = "NO REACTION";
+            red3 = 256;
+            green3 = 256;
+            blue3 = 256;
         }
-
-        Toast.makeText(getApplicationContext(), "Muestra Registrada", Toast.LENGTH_SHORT).show();
+        /*Toast.makeText(getApplicationContext(), "Muestra Registrada", Toast.LENGTH_SHORT).show();
 
         Intent intent = new Intent(getApplicationContext(), ResultadosActivity.class);
 
         intent.putExtra("man_red", red3);
         intent.putExtra("man_gre", green3);
         intent.putExtra("man_blu", blue3);
-        startActivity(intent);
+        startActivity(intent);*/
     }
 }

@@ -2,9 +2,15 @@ package com.example.myapplication;
 
 
 import android.Manifest;
+import android.content.Context;
 import android.content.Intent;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
+import android.hardware.camera2.CameraAccessException;
+import android.hardware.camera2.CameraCharacteristics;
+import android.hardware.camera2.CameraDevice;
+import android.hardware.camera2.CameraManager;
+import android.hardware.camera2.params.StreamConfigurationMap;
 import android.net.Uri;
 import android.os.Build;
 import android.os.Bundle;
@@ -14,6 +20,7 @@ import android.support.annotation.Nullable;
 import android.support.v4.content.FileProvider;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
+import android.util.Size;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageButton;
@@ -24,6 +31,7 @@ import java.io.File;
 import java.io.IOException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
+import java.util.stream.Stream;
 
 import static android.os.Environment.getExternalStoragePublicDirectory;
 
@@ -31,7 +39,10 @@ public class CamaraActivity extends AppCompatActivity {
 
     ImageView imageView;
     Button imageButton, test, volver1;
-    String pathToFile;
+    String pathToFile, cameraId;
+    CameraDevice cameraDevice;
+    Size size;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

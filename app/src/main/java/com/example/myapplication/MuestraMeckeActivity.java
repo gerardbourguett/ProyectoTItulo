@@ -22,6 +22,7 @@ public class MuestraMeckeActivity extends AppCompatActivity {
     ImageView imageMe;
     RadioButton mec_rgb, mecke_nr;
     int red2, green2, blue2;
+    int rojo1,verde1,azul1;
 
     @SuppressLint("ClickableViewAccessibility")
     @Override
@@ -43,6 +44,10 @@ public class MuestraMeckeActivity extends AppCompatActivity {
         if (bundle!=null){
             int image = bundle.getInt("image2");
             imageMe.setImageBitmap(bmp2);
+
+            rojo1 = bundle.getInt("r1");
+            verde1 = bundle.getInt("g1");
+            azul1 = bundle.getInt("b1");
         }
 
         vol_Mecke_inicio = findViewById(R.id.btnMecVolver);
@@ -105,6 +110,13 @@ public class MuestraMeckeActivity extends AppCompatActivity {
 
                 Intent anotherIntent = new Intent(MuestraMeckeActivity.this, MuestraMandelinActivity.class);
                 anotherIntent.putExtra("image3", byteArray);
+                anotherIntent.putExtra("r1",rojo1);
+                anotherIntent.putExtra("g1",verde1);
+                anotherIntent.putExtra("b1",azul1);
+
+                anotherIntent.putExtra("r2",red2);
+                anotherIntent.putExtra("g2",green2);
+                anotherIntent.putExtra("b2",blue2);
                 startActivity(anotherIntent);
                 finish();
             }
@@ -120,16 +132,19 @@ public class MuestraMeckeActivity extends AppCompatActivity {
         }
         if (mecke_nr.isChecked()){
             res = "NO REACTION";
+            red2 = 256;
+            green2 = 256;
+            blue2 = 256;
         }
 
-        Toast.makeText(getApplicationContext(), "Muestra Registrada", Toast.LENGTH_SHORT).show();
+        /*Toast.makeText(getApplicationContext(), "Muestra Registrada", Toast.LENGTH_SHORT).show();
 
         Intent intent = new Intent(getApplicationContext(), ResultadosActivity.class);
 
         intent.putExtra("mec_red", red2);
         intent.putExtra("mec_gre", green2);
         intent.putExtra("mec_blu", blue2);
-        startActivity(intent);
+        startActivity(intent);*/
     }
 
 
