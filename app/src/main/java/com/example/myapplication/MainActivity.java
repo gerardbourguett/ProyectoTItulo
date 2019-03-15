@@ -40,19 +40,22 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void cerrarApp(){
-        AlertDialog.Builder builder = new AlertDialog.Builder(this);
-        builder.setIcon(android.R.drawable.alert_light_frame);
-        builder.setTitle("Confirmación");
-        builder.setMessage("¿Desea salir de la aplicación?");
-        builder.setCancelable(false);
-        builder.setPositiveButton("Salir", new DialogInterface.OnClickListener() {
-            @Override
-            public void onClick(DialogInterface dialog, int which) {
-                Toast.makeText(MainActivity.this, "Saliendo...", Toast.LENGTH_SHORT).show();
-                android.os.Process.killProcess(android.os.Process.myPid());
-            }
-        });
-        builder.setNegativeButton("Cancelar", null);
-        builder.show();
+        AlertDialog.Builder builder = new AlertDialog.Builder(MainActivity.this);
+        builder.setTitle(R.string.app_name);
+        builder.setIcon(R.mipmap.ic_launcher);
+        builder.setMessage("Do you want to exit?")
+                .setCancelable(false)
+                .setPositiveButton("Yes", new DialogInterface.OnClickListener() {
+                    public void onClick(DialogInterface dialog, int id) {
+                        finish();
+                    }
+                })
+                .setNegativeButton("No", new DialogInterface.OnClickListener() {
+                    public void onClick(DialogInterface dialog, int id) {
+                        dialog.cancel();
+                    }
+                });
+        AlertDialog alert = builder.create();
+        alert.show();
     }
 }

@@ -19,8 +19,8 @@
         app:layout_constraintBottom_toTopOf="@+id/rg_mar"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tv_marckis"
-        app:srcCompat="@drawable/img_base" />
+        app:layout_constraintTop_toBottomOf="@+id/tv_marckis" />
+        <!--app:srcCompat="@drawable/img_base" -->
 
     <TextView
         android:id="@+id/tv_marckis"
@@ -52,8 +52,8 @@
             android:id="@+id/marckisRGB"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Color imagen"
-            android:layout_weight="1" />
+            android:layout_weight="1"
+            android:text="Pinche en la imagen" />
 
         <RadioButton
             android:id="@+id/mar_nr"

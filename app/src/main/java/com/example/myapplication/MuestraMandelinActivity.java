@@ -80,7 +80,6 @@ public class MuestraMandelinActivity extends AppCompatActivity {
                     int b = Color.blue(pixel);
 
                     man_rgb.setBackgroundColor(Color.rgb(r,g,b));
-                    man_rgb.setText("Pinche en la imagen");
 
                     red3 = r;
                     green3 = g;

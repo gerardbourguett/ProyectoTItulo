@@ -35,8 +35,8 @@
         app:layout_constraintBottom_toTopOf="@+id/btnVolver"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/img_base" />
+        app:layout_constraintTop_toTopOf="parent"/>
+    <!--app:srcCompat="@drawable/img_base"-->
 
     <Button
         android:id="@+id/btnTest"
@@ -44,11 +44,12 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="35dp"
         android:layout_marginEnd="35dp"
-        android:layout_marginBottom="113dp"
+        android:layout_marginBottom="114dp"
         android:text="@string/pasar_a_test"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/info" />
 
     <Button
         android:id="@+id/btnVolver"
@@ -63,14 +64,28 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imagen" />
 
-    <Button
+    <ImageButton
         android:id="@+id/cargar"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="9dp"
-        android:text="@string/tomar_foto"
-        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_width="48dp"
+        android:layout_height="0dp"
+        android:background="@drawable/ic_camera_alt_black_24dp"
+        app:layout_constraintBottom_toBottomOf="@+id/info"
+        app:layout_constraintEnd_toStartOf="@+id/info"
+        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imagen" />
+        app:layout_constraintTop_toTopOf="@+id/info" />
+
+    <ImageButton
+        android:id="@+id/info"
+        android:layout_width="48dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="430dp"
+        android:layout_marginBottom="19dp"
+        android:background="@drawable/ic_info_black_24dp"
+        app:layout_constraintBottom_toTopOf="@+id/btnTest"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/cargar"
+        app:layout_constraintTop_toTopOf="parent" />
 
 </android.support.constraint.ConstraintLayout>

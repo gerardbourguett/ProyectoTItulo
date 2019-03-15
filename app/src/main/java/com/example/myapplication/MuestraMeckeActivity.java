@@ -76,7 +76,6 @@ public class MuestraMeckeActivity extends AppCompatActivity {
                     int b = Color.blue(pixel);
 
                     mec_rgb.setBackgroundColor(Color.rgb(r,g,b));
-                    mec_rgb.setText("Pinche en la imagen");
 
                     red2 = r;
                     green2 = g;

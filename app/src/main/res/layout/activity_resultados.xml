@@ -6,6 +6,7 @@
     android:layout_height="match_parent"
     android:background="@drawable/fondo"
     android:orientation="vertical"
+    tools:ignore="RtlSymmetry"
     tools:context=".ResultadosActivity">
 
     <TextView
@@ -31,7 +32,7 @@
         android:text="@string/marckis"
         android:textAlignment="center"
         android:textColor="@color/primaryLightColor"
-        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
         android:textStyle="bold" />
 
     <TextView
@@ -43,7 +44,7 @@
         android:layout_alignParentTop="true"
         android:layout_marginStart="9dp"
         android:layout_marginTop="82dp"
-        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
         android:textAlignment="center" />
 
     <TextView
@@ -57,7 +58,7 @@
         android:text="@string/mecke"
         android:textAlignment="center"
         android:textColor="@color/primaryLightColor"
-        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
         android:textStyle="bold" />
 
     <TextView
@@ -67,7 +68,7 @@
         android:layout_below="@+id/tv_Mecke"
         android:layout_alignTop="@+id/colorMarckis"
         android:layout_marginTop="0dp"
-        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
         android:layout_marginEnd="9dp"
         android:textAlignment="center" />
 
@@ -81,7 +82,7 @@
         android:text="@string/mandelin"
         android:textAlignment="center"
         android:textColor="@color/primaryLightColor"
-        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
         android:layout_marginStart="9dp"
         android:textStyle="bold" />
 
@@ -92,7 +93,7 @@
         android:layout_alignStart="@+id/tv_Resultados"
         android:layout_alignParentTop="true"
         android:layout_marginTop="163dp"
-        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
         android:layout_marginStart="9dp"
         android:textAlignment="center" />
 
@@ -105,7 +106,7 @@
         android:text="@string/simon"
         android:textAlignment="center"
         android:textColor="@color/primaryLightColor"
-        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
         android:layout_marginEnd="9dp"
         android:textStyle="bold" />
 
@@ -115,7 +116,7 @@
         android:layout_height="31dp"
         android:layout_alignTop="@+id/colorMandelin"
         android:layout_alignEnd="@+id/tv_Mecke"
-        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
         android:layout_marginEnd="9dp"
         android:textAlignment="center" />
 
@@ -133,16 +134,16 @@
 
     <TextView
         android:id="@+id/tvResMarckis"
-        android:layout_width="193dp"
+        android:layout_width="192dp"
         android:layout_height="wrap_content"
         android:layout_alignStart="@+id/tv_Resultados"
+        android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
+        android:layout_marginStart="9dp"
         android:layout_marginTop="260dp"
         android:text="@string/marckis"
         android:textAlignment="center"
         android:textColor="@color/primaryLightColor"
-        android:layout_alignParentLeft="true"
-        android:layout_marginStart="9dp"
         android:textStyle="bold" />
 
     <ListView
@@ -152,22 +153,22 @@
         android:layout_alignEnd="@+id/tv_mandelin"
         android:layout_alignParentBottom="true"
         android:layout_marginEnd="0dp"
-        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
         android:layout_marginStart="9dp"
         android:layout_marginBottom="246dp" />
 
     <TextView
         android:id="@+id/tvResMecke"
-        android:layout_width="194dp"
+        android:layout_width="192dp"
         android:layout_height="wrap_content"
         android:layout_alignTop="@+id/tvResMarckis"
         android:layout_alignEnd="@+id/tv_Mecke"
+        android:layout_alignParentEnd="true"
         android:layout_marginTop="1dp"
+        android:layout_marginEnd="9dp"
         android:text="@string/mecke"
         android:textAlignment="center"
         android:textColor="@color/primaryLightColor"
-        android:layout_alignParentRight="true"
-        android:layout_marginEnd="9dp"
         android:textStyle="bold" />
 
     <ListView
@@ -177,7 +178,7 @@
         android:layout_alignStart="@+id/tv_Resultados"
         android:layout_alignParentBottom="true"
         android:layout_marginStart="202dp"
-        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
         android:layout_marginEnd="9dp"
         android:layout_marginBottom="247dp" />
 
@@ -191,7 +192,7 @@
         android:text="@string/mandelin"
         android:textAlignment="center"
         android:textColor="@color/primaryLightColor"
-        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
         android:layout_marginStart="9dp"
         android:textStyle="bold" />
 
@@ -201,7 +202,7 @@
         android:layout_height="124dp"
         android:layout_below="@+id/tvResMandelin"
         android:layout_alignStart="@+id/tv_Resultados"
-        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
         android:layout_marginStart="9dp"
         android:layout_marginTop="-217dp" />
 
@@ -214,7 +215,7 @@
         android:text="@string/simon"
         android:textAlignment="center"
         android:textColor="@color/primaryLightColor"
-        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
         android:layout_marginEnd="9dp"
         android:textStyle="bold" />
 
@@ -223,9 +224,35 @@
         android:layout_width="194dp"
         android:layout_height="124dp"
         android:layout_below="@+id/tvResSimon"
-        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
         android:layout_marginEnd="9dp"
         android:layout_alignStart="@+id/resCoiMec" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="568dp"
+        android:gravity="fill_horizontal"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/btnEnviar"
+            style="?android:attr/buttonBarButtonStyle"
+            android:layout_width="207dp"
+            android:layout_height="wrap_content"
+            android:paddingStart="25dp"
+            android:text="@string/enviar_resultados" />
+
+        <Button
+            android:id="@+id/btnRetomar"
+            style="?android:attr/buttonBarButtonStyle"
+            android:layout_width="199dp"
+            android:layout_height="wrap_content"
+            android:paddingEnd="25dp"
+            android:text="@string/nueva_muestra" />
+    </LinearLayout>
 
 
 </RelativeLayout>

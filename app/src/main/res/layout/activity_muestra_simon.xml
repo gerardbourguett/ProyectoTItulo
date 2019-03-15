@@ -19,8 +19,8 @@
         app:layout_constraintBottom_toTopOf="@+id/rg_sim"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tv_simon"
-        app:srcCompat="@drawable/img_base" />
+        app:layout_constraintTop_toBottomOf="@+id/tv_simon" />
+        <!--app:srcCompat="@drawable/img_base" />-->
 
     <TextView
         android:id="@+id/tv_simon"
@@ -52,7 +52,8 @@
             android:id="@+id/simonRGB"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_weight="1" />
+            android:layout_weight="1"
+            android:text="Pinche en la imagen" />
 
         <RadioButton
             android:id="@+id/sim_nr"

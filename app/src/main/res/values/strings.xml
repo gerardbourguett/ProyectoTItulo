@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">APP Test Colorimetria</string>
+    <string name="app_name">APP Test</string>
     <string name="todo">TODO</string>
     <string name="salir">Salir</string>
     <string name="comenzar_analisis">Comenzar analisis</string>
@@ -32,4 +32,6 @@
     <string name="muestra">Muestra</string>
     <string name="coincidencias">Coincidencias</string>
     <string name="capture">CAPTURE</string>
+    <string name="nueva_muestra">Nueva Muestra</string>
+    <string name="enviar_resultados">Enviar Resultados</string>
 </resources>

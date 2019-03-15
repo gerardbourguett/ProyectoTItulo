@@ -5,8 +5,8 @@ import android.content.Intent;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.graphics.Color;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.MotionEvent;
 import android.view.View;
@@ -71,7 +71,6 @@ public class MuestraMarckisActivity extends AppCompatActivity {
                     int b = Color.blue(pixel);
                     
                     mar_rgb.setBackgroundColor(Color.rgb(r,g,b));
-                    mar_rgb.setText("Pinche en la imagen");
 
                     red1 = String.valueOf(r);
                     green1 = String.valueOf(g);

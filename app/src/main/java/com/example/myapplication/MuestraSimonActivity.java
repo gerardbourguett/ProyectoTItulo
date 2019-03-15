@@ -84,7 +84,6 @@ public class MuestraSimonActivity extends AppCompatActivity {
                     int b = Color.blue(pixel);
 
                     sim_rgb.setBackgroundColor(Color.rgb(r,g,b));
-                    sim_rgb.setText("Pinche en la imagen");
 
                     red4 = r;
                     green4 = g;
