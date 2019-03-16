@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "153926819698",
+    "firebase_url": "https://fundacioncannabis-16c51.firebaseio.com",
+    "project_id": "fundacioncannabis-16c51",
+    "storage_bucket": "fundacioncannabis-16c51.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:153926819698:android:13c3c6a65bcbec53",
+        "android_client_info": {
+          "package_name": "com.example.myapplication"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "153926819698-h93qe88r57k56672uo9fuqtksub0hht3.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.myapplication",
+            "certificate_hash": "d3188cc5eca1603c99723fbb980f989a874113b4"
+          }
+        },
+        {
+          "client_id": "153926819698-gjdn5fdhqmsjgchg4n8c3r2deet6hfn7.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBGIBy6FG8xgToSeF08iCFrK2lTmAdlwxY"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "153926819698-gjdn5fdhqmsjgchg4n8c3r2deet6hfn7.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
