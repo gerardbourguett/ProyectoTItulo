@@ -14,6 +14,10 @@ import android.widget.ImageView;
 import android.widget.RadioButton;
 import android.widget.Toast;
 
+import com.example.myapplication.firebase.RGBMecke;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+
 import java.io.ByteArrayOutputStream;
 
 public class MuestraMeckeActivity extends AppCompatActivity {
@@ -24,11 +28,15 @@ public class MuestraMeckeActivity extends AppCompatActivity {
     int red2, green2, blue2;
     int rojo1,verde1,azul1;
 
+    private DatabaseReference mDatabase;
+
     @SuppressLint("ClickableViewAccessibility")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_muestra_mecke);
+
+        mDatabase = FirebaseDatabase.getInstance().getReference();
 
         mec_rgb = findViewById(R.id.meckeRGB);
         mecke_nr = findViewById(R.id.mecke_nr);
@@ -123,17 +131,25 @@ public class MuestraMeckeActivity extends AppCompatActivity {
 
     }
 
+    private void agregarMecke(String red1, String green1, String blue1) {
+        RGBMecke rgbMecke = new RGBMecke(red1,green1,blue1);
+
+        mDatabase.child("Mecke").setValue(rgbMecke);
+    }
+
     private void validar() {
         String res = "";
 
         if(mec_rgb.isChecked()){
             res = (String) mec_rgb.getText();
+            agregarMecke(String.valueOf(red2),String.valueOf(green2),String.valueOf(blue2));
         }
         if (mecke_nr.isChecked()){
             res = "NO REACTION";
             red2 = 256;
             green2 = 256;
             blue2 = 256;
+            agregarMecke(String.valueOf(red2),String.valueOf(green2),String.valueOf(blue2));
         }
 
         /*Toast.makeText(getApplicationContext(), "Muestra Registrada", Toast.LENGTH_SHORT).show();

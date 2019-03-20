@@ -13,6 +13,11 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.RadioButton;
+
+import com.example.myapplication.firebase.RGBMarckis;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+
 import java.io.ByteArrayOutputStream;
 
 public class MuestraMarckisActivity extends AppCompatActivity {
@@ -22,12 +27,16 @@ public class MuestraMarckisActivity extends AppCompatActivity {
     RadioButton mar_rgb, marckis_nr;
     String red1, green1, blue1;
     int r1,g1,b1;
+    private DatabaseReference mDatabase;
+
 
     @SuppressLint("ClickableViewAccessibility")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_muestra_marckis);
+
+        mDatabase = FirebaseDatabase.getInstance().getReference();
         
         mar_rgb = findViewById(R.id.marckisRGB);
         marckis_nr = findViewById(R.id.mar_nr);
@@ -119,17 +128,25 @@ public class MuestraMarckisActivity extends AppCompatActivity {
 
     }
 
+    private void agregarMarckis(String red1, String green1, String blue1) {
+        RGBMarckis rgbMarckis = new RGBMarckis(red1,green1,blue1);
+
+        mDatabase.child("Marckis").setValue(rgbMarckis);
+    }
+
     private void validar() {
         String res = "";
 
         if(mar_rgb.isChecked()){
             res = (String) mar_rgb.getText();
+            agregarMarckis(red1,green1,blue1);
         }
         if (marckis_nr.isChecked()){
             res = "NO REACTION";
             r1 = 256;
             g1 = 256;
             b1 = 256;
+            agregarMarckis(String.valueOf(r1), String.valueOf(g1), String.valueOf(b1));
         }
 
         //Toast.makeText(getApplicationContext(), "Muestra Marckis Registrada", Toast.LENGTH_SHORT).show();

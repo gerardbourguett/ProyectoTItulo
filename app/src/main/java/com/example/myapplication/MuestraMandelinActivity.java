@@ -14,6 +14,10 @@ import android.widget.ImageView;
 import android.widget.RadioButton;
 import android.widget.Toast;
 
+import com.example.myapplication.firebase.RGBMandelin;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+
 import java.io.ByteArrayOutputStream;
 
 public class MuestraMandelinActivity extends AppCompatActivity {
@@ -23,12 +27,15 @@ public class MuestraMandelinActivity extends AppCompatActivity {
     RadioButton man_rgb, mandelin_nr;
     int red3, green3, blue3;
     private int rojo1,rojo2,rojo3,verde1,verde2,verde3,azul1,azul2,azul3;
+    private DatabaseReference mDatabase;
 
     @SuppressLint("ClickableViewAccessibility")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_muestra_mandelin);
+
+        mDatabase = FirebaseDatabase.getInstance().getReference();
 
         man_rgb = findViewById(R.id.mandelinRGB);
         mandelin_nr = findViewById(R.id.man_nr);
@@ -125,9 +132,6 @@ public class MuestraMandelinActivity extends AppCompatActivity {
                 anotherIntent.putExtra("r3",red3);
                 anotherIntent.putExtra("g3",green3);
                 anotherIntent.putExtra("b3",blue3);
-
-
-
                 startActivity(anotherIntent);
                 finish();
             }
@@ -136,17 +140,25 @@ public class MuestraMandelinActivity extends AppCompatActivity {
 
     }
 
+    private void agregarMandelin(String red1, String green1, String blue1) {
+        RGBMandelin rgbMandelin = new RGBMandelin(red1,green1,blue1);
+
+        mDatabase.child("Mandelin").setValue(rgbMandelin);
+    }
+
     private void validar() {
         String res = "";
 
         if(man_rgb.isChecked()){
             res = (String) man_rgb.getText();
+            agregarMandelin(String.valueOf(red3),String.valueOf(green3),String.valueOf(blue3));
         }
         if (mandelin_nr.isChecked()){
             res = "NO REACTION";
             red3 = 256;
             green3 = 256;
             blue3 = 256;
+            agregarMandelin(String.valueOf(red3),String.valueOf(green3),String.valueOf(blue3));
         }
         /*Toast.makeText(getApplicationContext(), "Muestra Registrada", Toast.LENGTH_SHORT).show();
 

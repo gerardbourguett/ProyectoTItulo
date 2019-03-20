@@ -14,6 +14,10 @@ import android.widget.ImageView;
 import android.widget.RadioButton;
 import android.widget.Toast;
 
+import com.example.myapplication.firebase.RGBSimon;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+
 import java.io.ByteArrayOutputStream;
 
 public class MuestraSimonActivity extends AppCompatActivity {
@@ -23,12 +27,15 @@ public class MuestraSimonActivity extends AppCompatActivity {
     RadioButton sim_rgb, simon_nr;
     int red4, green4, blue4;
     private int rojo1,rojo2,rojo3,verde1,verde2,verde3,azul1,azul2,azul3;
+    private DatabaseReference mDatabase;
 
     @SuppressLint("ClickableViewAccessibility")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_muestra_simon);
+
+        mDatabase = FirebaseDatabase.getInstance().getReference();
 
         sim_rgb = findViewById(R.id.simonRGB);
         simon_nr = findViewById(R.id.sim_nr);
@@ -141,17 +148,26 @@ public class MuestraSimonActivity extends AppCompatActivity {
 
     }
 
+    private void agrerarSimon(String red1, String green1, String blue1) {
+        RGBSimon rgbSimon = new RGBSimon(red1,green1,blue1);
+
+        mDatabase.child("Simon").setValue(rgbSimon);
+    }
+
     private void validar() {
         String res = "";
 
         if(sim_rgb.isChecked()){
             res = (String) sim_rgb.getText();
+            agrerarSimon(String.valueOf(red4),String.valueOf(green4),String.valueOf(blue4));
+
         }
         if (simon_nr.isChecked()){
             res = "NO REACTION";
             red4 = 256;
             green4 = 256;
             blue4 = 256;
+            agrerarSimon(String.valueOf(red4),String.valueOf(green4),String.valueOf(blue4));
         }
 
         /*Toast.makeText(getApplicationContext(), "Muestra Simon Registrada", Toast.LENGTH_SHORT).show();
