@@ -11,26 +11,27 @@
         android:id="@+id/txtGestion"
         android:layout_width="244dp"
         android:layout_height="wrap_content"
-        android:layout_marginStart="84dp"
         android:layout_marginTop="52dp"
-        android:layout_marginEnd="83dp"
+        android:layout_marginBottom="18dp"
         android:text="@string/gestionar_imagen"
         android:textAlignment="center"
         android:textColor="@color/primaryLightColor"
         android:textSize="24sp"
         android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/imagen"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <ImageView
         android:id="@+id/imagen"
-        android:layout_width="326dp"
-        android:layout_height="358dp"
-        android:layout_marginStart="40dp"
-        android:layout_marginTop="18dp"
-        android:layout_marginEnd="40dp"
+        android:layout_width="334dp"
+        android:layout_height="400dp"
+        android:layout_marginStart="42dp"
+        android:layout_marginEnd="42dp"
+        android:layout_marginBottom="24dp"
         android:contentDescription="@string/todo"
+        app:layout_constraintBottom_toTopOf="@+id/info"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/txtGestion" />
@@ -38,18 +39,19 @@
 
     <Button
         android:id="@+id/btnTest"
-        android:layout_width="341dp"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="35dp"
         android:layout_marginEnd="35dp"
         android:text="@string/pasar_a_test"
         app:layout_constraintBottom_toTopOf="@+id/btnVolver"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/info" />
 
     <Button
         android:id="@+id/btnVolver"
-        android:layout_width="341dp"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="35dp"
         android:layout_marginEnd="35dp"
@@ -57,32 +59,33 @@
         android:text="@string/volver"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnTest" />
 
     <ImageButton
         android:id="@+id/cargar"
-        android:layout_width="52dp"
-        android:layout_height="55dp"
+        android:layout_width="43dp"
+        android:layout_height="37dp"
         android:layout_marginStart="105dp"
-        android:layout_marginTop="41dp"
-        android:layout_marginBottom="14dp"
+        android:layout_marginEnd="97dp"
         android:background="@drawable/ic_camera_alt_black_24dp"
-        app:layout_constraintBottom_toTopOf="@+id/btnTest"
+        android:contentDescription="@string/todo3"
+        app:layout_constraintBottom_toBottomOf="@+id/info"
+        app:layout_constraintEnd_toStartOf="@+id/info"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imagen"
-        android:contentDescription="@string/todo3" />
+        app:layout_constraintTop_toTopOf="@+id/info" />
 
     <ImageButton
         android:id="@+id/info"
-        android:layout_width="52dp"
-        android:layout_height="55dp"
-        android:layout_marginTop="41dp"
+        android:layout_width="31dp"
+        android:layout_height="35dp"
         android:layout_marginEnd="105dp"
-        android:layout_marginBottom="14dp"
+        android:layout_marginBottom="13dp"
         android:background="@drawable/ic_info_black_24dp"
+        android:contentDescription="@string/todo2"
         app:layout_constraintBottom_toTopOf="@+id/btnTest"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imagen"
-        android:contentDescription="@string/todo2" />
+        app:layout_constraintStart_toEndOf="@+id/cargar"
+        app:layout_constraintTop_toBottomOf="@+id/imagen" />
 
 </android.support.constraint.ConstraintLayout>
