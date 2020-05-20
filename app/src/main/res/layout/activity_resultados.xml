@@ -1,258 +1,285 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/relativeLayout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/fondo"
     android:orientation="vertical"
-    tools:ignore="RtlSymmetry"
-    tools:context=".ResultadosActivity">
+    tools:context=".ResultadosActivity"
+    tools:ignore="RtlSymmetry">
 
     <TextView
         android:id="@+id/tv_Resultados"
-        android:layout_width="395dp"
-        android:layout_height="31dp"
-        android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="9dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="3dp"
+        android:layout_marginEnd="151dp"
         android:gravity="center_horizontal"
         android:text="@string/resultados"
         android:textAlignment="center"
         android:textColor="@color/primaryLightColor"
-        android:textStyle="bold" />
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:layout_conversion_absoluteHeight="31dp"
+        tools:layout_conversion_absoluteWidth="395dp" />
 
     <TextView
         android:id="@+id/tv_marckis"
-        android:layout_width="194dp"
-        android:layout_height="31dp"
-        android:layout_below="@+id/tv_Resultados"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:layout_marginStart="9dp"
-        android:layout_marginTop="2dp"
+        android:layout_marginTop="42dp"
         android:text="@string/marckis"
         android:textAlignment="center"
         android:textColor="@color/primaryLightColor"
-        android:layout_alignParentStart="true"
-        android:textStyle="bold" />
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:layout_conversion_absoluteHeight="31dp"
+        tools:layout_conversion_absoluteWidth="194dp" />
 
     <TextView
         android:id="@+id/colorMarckis"
-        android:layout_width="194dp"
-        android:layout_height="31dp"
-        android:layout_below="@+id/tv_marckis"
-        android:layout_alignStart="@+id/tv_marckis"
-        android:layout_alignParentTop="true"
-        android:layout_marginStart="9dp"
-        android:layout_marginTop="82dp"
-        android:layout_alignParentStart="true"
-        android:textAlignment="center" />
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="21dp"
+        android:textAlignment="center"
+        app:layout_constraintEnd_toStartOf="@+id/tv_marckis"
+        app:layout_constraintStart_toStartOf="@+id/tv_marckis"
+        app:layout_constraintTop_toBottomOf="@+id/tv_marckis"
+        tools:layout_conversion_absoluteHeight="31dp"
+        tools:layout_conversion_absoluteWidth="194dp" />
 
     <TextView
         android:id="@+id/tv_Mecke"
-        android:layout_width="194dp"
-        android:layout_height="31dp"
-        android:layout_below="@+id/tv_Resultados"
-        android:layout_alignEnd="@+id/tv_Resultados"
-        android:layout_marginTop="2dp"
-        android:layout_marginEnd="9dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="10dp"
         android:text="@string/mecke"
         android:textAlignment="center"
         android:textColor="@color/primaryLightColor"
-        android:layout_alignParentEnd="true"
-        android:textStyle="bold" />
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@+id/tv_Resultados"
+        app:layout_constraintTop_toBottomOf="@+id/tv_Resultados"
+        tools:layout_conversion_absoluteHeight="31dp"
+        tools:layout_conversion_absoluteWidth="194dp" />
 
     <TextView
         android:id="@+id/colorMecke"
-        android:layout_width="194dp"
-        android:layout_height="31dp"
-        android:layout_below="@+id/tv_Mecke"
-        android:layout_alignTop="@+id/colorMarckis"
-        android:layout_marginTop="0dp"
-        android:layout_alignParentEnd="true"
-        android:layout_marginEnd="9dp"
-        android:textAlignment="center" />
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="21dp"
+        android:textAlignment="center"
+        app:layout_constraintEnd_toStartOf="@+id/tv_Mecke"
+        app:layout_constraintStart_toStartOf="@+id/tv_Mecke"
+        app:layout_constraintTop_toBottomOf="@+id/tv_Mecke"
+        tools:layout_conversion_absoluteHeight="31dp"
+        tools:layout_conversion_absoluteWidth="194dp" />
 
     <TextView
         android:id="@+id/tv_mandelin"
-        android:layout_width="194dp"
-        android:layout_height="31dp"
-        android:layout_alignStart="@+id/tv_Resultados"
-        android:layout_alignParentTop="true"
-        android:layout_marginTop="124dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="9dp"
+        android:layout_marginTop="23dp"
         android:text="@string/mandelin"
         android:textAlignment="center"
         android:textColor="@color/primaryLightColor"
-        android:layout_alignParentStart="true"
-        android:layout_marginStart="9dp"
-        android:textStyle="bold" />
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/colorMarckis"
+        tools:layout_conversion_absoluteHeight="31dp"
+        tools:layout_conversion_absoluteWidth="194dp" />
 
     <TextView
         android:id="@+id/colorMandelin"
-        android:layout_width="194dp"
-        android:layout_height="31dp"
-        android:layout_alignStart="@+id/tv_Resultados"
-        android:layout_alignParentTop="true"
-        android:layout_marginTop="163dp"
-        android:layout_alignParentStart="true"
-        android:layout_marginStart="9dp"
-        android:textAlignment="center" />
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:textAlignment="center"
+        app:layout_constraintEnd_toStartOf="@+id/tvCoincidencias"
+        app:layout_constraintStart_toStartOf="@+id/tvCoincidencias"
+        app:layout_constraintTop_toBottomOf="@+id/tv_mandelin"
+        tools:layout_conversion_absoluteHeight="31dp"
+        tools:layout_conversion_absoluteWidth="194dp" />
 
     <TextView
         android:id="@+id/tv_simon"
-        android:layout_width="194dp"
-        android:layout_height="31dp"
-        android:layout_alignTop="@+id/tv_mandelin"
-        android:layout_alignEnd="@+id/tv_Mecke"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="23dp"
         android:text="@string/simon"
         android:textAlignment="center"
         android:textColor="@color/primaryLightColor"
-        android:layout_alignParentEnd="true"
-        android:layout_marginEnd="9dp"
-        android:textStyle="bold" />
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="@+id/colorMecke"
+        app:layout_constraintTop_toBottomOf="@+id/colorMecke"
+        tools:layout_conversion_absoluteHeight="31dp"
+        tools:layout_conversion_absoluteWidth="194dp" />
 
     <TextView
         android:id="@+id/colorSimon"
-        android:layout_width="194dp"
-        android:layout_height="31dp"
-        android:layout_alignTop="@+id/colorMandelin"
-        android:layout_alignEnd="@+id/tv_Mecke"
-        android:layout_alignParentEnd="true"
-        android:layout_marginEnd="9dp"
-        android:textAlignment="center" />
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:textAlignment="center"
+        app:layout_constraintEnd_toStartOf="@+id/tv_simon"
+        app:layout_constraintStart_toStartOf="@+id/tv_simon"
+        app:layout_constraintTop_toBottomOf="@+id/tv_simon"
+        tools:layout_conversion_absoluteHeight="31dp"
+        tools:layout_conversion_absoluteWidth="194dp" />
 
     <TextView
         android:id="@+id/tvCoincidencias"
-        android:layout_width="395dp"
-        android:layout_height="37dp"
-        android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="207dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="25dp"
         android:text="@string/coincidencias"
         android:textAlignment="center"
         android:textColor="@color/primaryLightColor"
-        android:textStyle="bold" />
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/colorMandelin"
+        tools:layout_conversion_absoluteHeight="37dp"
+        tools:layout_conversion_absoluteWidth="395dp" />
 
     <TextView
         android:id="@+id/tvResMarckis"
-        android:layout_width="192dp"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignStart="@+id/tv_Resultados"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentTop="true"
         android:layout_marginStart="9dp"
-        android:layout_marginTop="260dp"
+        android:layout_marginBottom="8dp"
         android:text="@string/marckis"
         android:textAlignment="center"
         android:textColor="@color/primaryLightColor"
-        android:textStyle="bold" />
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/resCoiMar"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:layout_conversion_absoluteHeight="19dp"
+        tools:layout_conversion_absoluteWidth="192dp" />
 
     <ListView
         android:id="@+id/resCoiMar"
-        android:layout_width="192dp"
-        android:layout_height="124dp"
-        android:layout_alignEnd="@+id/tv_mandelin"
-        android:layout_alignParentBottom="true"
-        android:layout_marginEnd="0dp"
-        android:layout_alignParentStart="true"
-        android:layout_marginStart="9dp"
-        android:layout_marginBottom="246dp" />
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="61dp"
+        app:layout_constraintEnd_toStartOf="@+id/tvResMecke"
+        app:layout_constraintStart_toStartOf="@+id/tvResMecke"
+        app:layout_constraintTop_toBottomOf="@+id/tvCoincidencias"
+        tools:layout_conversion_absoluteHeight="124dp"
+        tools:layout_conversion_absoluteWidth="194dp" />
 
     <TextView
         android:id="@+id/tvResMecke"
-        android:layout_width="192dp"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignTop="@+id/tvResMarckis"
-        android:layout_alignEnd="@+id/tv_Mecke"
-        android:layout_alignParentEnd="true"
-        android:layout_marginTop="1dp"
-        android:layout_marginEnd="9dp"
+        android:layout_marginStart="2dp"
+        android:layout_marginBottom="4dp"
         android:text="@string/mecke"
         android:textAlignment="center"
         android:textColor="@color/primaryLightColor"
-        android:textStyle="bold" />
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/resCoiMec"
+        app:layout_constraintStart_toStartOf="@+id/colorSimon"
+        tools:layout_conversion_absoluteHeight="19dp"
+        tools:layout_conversion_absoluteWidth="192dp" />
 
     <ListView
         android:id="@+id/resCoiMec"
-        android:layout_width="192dp"
-        android:layout_height="124dp"
-        android:layout_alignStart="@+id/tv_Resultados"
-        android:layout_alignParentBottom="true"
-        android:layout_marginStart="202dp"
-        android:layout_alignParentEnd="true"
-        android:layout_marginEnd="9dp"
-        android:layout_marginBottom="247dp" />
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="3dp"
+        android:layout_marginBottom="3dp"
+        app:layout_constraintBottom_toBottomOf="@+id/resCoiMar"
+        app:layout_constraintStart_toStartOf="@+id/tvResMecke"
+        tools:layout_conversion_absoluteHeight="124dp"
+        tools:layout_conversion_absoluteWidth="192dp" />
 
     <TextView
         android:id="@+id/tvResMandelin"
-        android:layout_width="193dp"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignEnd="@+id/tv_mandelin"
-        android:layout_alignParentBottom="true"
+        android:layout_marginTop="216dp"
         android:layout_marginBottom="217dp"
         android:text="@string/mandelin"
         android:textAlignment="center"
         android:textColor="@color/primaryLightColor"
-        android:layout_alignParentStart="true"
-        android:layout_marginStart="9dp"
-        android:textStyle="bold" />
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/resCoiMan"
+        app:layout_constraintTop_toBottomOf="@+id/tvResMarckis"
+        tools:layout_conversion_absoluteHeight="19dp"
+        tools:layout_conversion_absoluteWidth="194dp" />
 
     <ListView
         android:id="@+id/resCoiMan"
-        android:layout_width="193dp"
-        android:layout_height="124dp"
-        android:layout_below="@+id/tvResMandelin"
-        android:layout_alignStart="@+id/tv_Resultados"
-        android:layout_alignParentStart="true"
-        android:layout_marginStart="9dp"
-        android:layout_marginTop="-217dp" />
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="1dp"
+        app:layout_constraintEnd_toStartOf="@+id/resCoiSim"
+        app:layout_constraintStart_toStartOf="@+id/resCoiSim"
+        app:layout_constraintTop_toBottomOf="@+id/tvResMandelin"
+        tools:layout_conversion_absoluteHeight="124dp"
+        tools:layout_conversion_absoluteWidth="193dp" />
 
     <TextView
         android:id="@+id/tvResSimon"
-        android:layout_width="194dp"
-        android:layout_height="20dp"
-        android:layout_alignEnd="@+id/tv_Resultados"
-        android:layout_alignBottom="@+id/tvResMandelin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="2dp"
         android:text="@string/simon"
         android:textAlignment="center"
         android:textColor="@color/primaryLightColor"
-        android:layout_alignParentEnd="true"
-        android:layout_marginEnd="9dp"
-        android:textStyle="bold" />
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/resCoiMan"
+        app:layout_constraintEnd_toEndOf="@+id/tv_simon"
+        app:layout_constraintStart_toStartOf="@+id/colorSimon"
+        tools:layout_conversion_absoluteHeight="20dp"
+        tools:layout_conversion_absoluteWidth="194dp" />
 
     <ListView
         android:id="@+id/resCoiSim"
-        android:layout_width="194dp"
-        android:layout_height="124dp"
-        android:layout_below="@+id/tvResSimon"
-        android:layout_alignParentEnd="true"
-        android:layout_marginEnd="9dp"
-        android:layout_alignStart="@+id/resCoiMec" />
-
-    <LinearLayout
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentTop="true"
-        android:layout_marginTop="568dp"
-        android:gravity="fill_horizontal"
-        android:orientation="horizontal">
-
-        <Button
-            android:id="@+id/btnEnviar"
-            style="?android:attr/buttonBarButtonStyle"
-            android:layout_width="207dp"
-            android:layout_height="wrap_content"
-            android:paddingStart="25dp"
-            android:text="@string/enviar_resultados" />
-
-        <Button
-            android:id="@+id/btnRetomar"
-            style="?android:attr/buttonBarButtonStyle"
-            android:layout_width="199dp"
-            android:layout_height="wrap_content"
-            android:paddingEnd="25dp"
-            android:text="@string/nueva_muestra" />
-    </LinearLayout>
+        android:layout_marginTop="1dp"
+        app:layout_constraintStart_toStartOf="@+id/resCoiMec"
+        app:layout_constraintTop_toBottomOf="@+id/tvResSimon"
+        tools:layout_conversion_absoluteHeight="124dp"
+        tools:layout_conversion_absoluteWidth="189dp" />
 
 
-</RelativeLayout>
+    <Button
+        android:id="@+id/btnEnviar"
+        style="?android:attr/buttonBarButtonStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginBottom="3dp"
+        android:paddingStart="25dp"
+        android:text="@string/enviar_resultados"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:layout_conversion_absoluteHeight="54dp"
+        tools:layout_conversion_absoluteWidth="207dp" />
+
+    <Button
+        android:id="@+id/btnRetomar"
+        style="?android:attr/buttonBarButtonStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="32dp"
+        android:layout_marginBottom="3dp"
+        android:paddingEnd="25dp"
+        android:text="@string/nueva_muestra"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        tools:layout_conversion_absoluteHeight="54dp"
+        tools:layout_conversion_absoluteWidth="199dp" />
+
+
+</android.support.constraint.ConstraintLayout>

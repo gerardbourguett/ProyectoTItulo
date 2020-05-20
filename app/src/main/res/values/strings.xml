@@ -34,4 +34,7 @@
     <string name="capture">CAPTURE</string>
     <string name="nueva_muestra">Nueva Muestra</string>
     <string name="enviar_resultados">Enviar Resultados</string>
+    <string name="todo2">TODO</string>
+    <string name="todo3">TODO</string>
+    <string name="pinche_en_la_imagen">Pinche en la imagen</string>
 </resources>
