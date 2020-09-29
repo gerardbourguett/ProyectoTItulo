@@ -28,15 +28,15 @@
     <ImageView
         android:id="@+id/imagen"
         android:layout_width="0dp"
-        android:layout_height="395dp"
+        android:layout_height="350dp"
         android:layout_marginStart="30dp"
+        android:layout_marginTop="16dp"
         android:layout_marginEnd="30dp"
-        android:layout_marginBottom="40dp"
         android:contentDescription="@string/todo"
-        app:layout_constraintBottom_toTopOf="@+id/info"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtGestion" />
 
     <Button
         android:id="@+id/btnTest"
@@ -68,10 +68,12 @@
         android:id="@+id/cargar"
         android:layout_width="43dp"
         android:layout_height="37dp"
-        android:layout_marginStart="110dp"
-        android:layout_marginTop="40dp"
+        android:layout_marginStart="120dp"
+        android:layout_marginTop="44dp"
+        android:layout_marginBottom="60dp"
         android:background="@drawable/ic_camera_alt_black_24dp"
         android:contentDescription="@string/todo3"
+        app:layout_constraintBottom_toTopOf="@+id/btnTest"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imagen" />
 
@@ -79,13 +81,16 @@
         android:id="@+id/info"
         android:layout_width="31dp"
         android:layout_height="35dp"
-        android:layout_marginStart="117dp"
-        android:layout_marginEnd="110dp"
-        android:layout_marginBottom="24dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="44dp"
+        android:layout_marginEnd="120dp"
+        android:layout_marginBottom="60dp"
         android:background="@drawable/ic_info_black_24dp"
         android:contentDescription="@string/todo2"
         app:layout_constraintBottom_toTopOf="@+id/btnTest"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/cargar" />
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toEndOf="@+id/cargar"
+        app:layout_constraintTop_toBottomOf="@+id/imagen" />
 
 </android.support.constraint.ConstraintLayout>
