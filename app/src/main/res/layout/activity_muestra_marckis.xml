@@ -8,26 +8,26 @@
     android:orientation="vertical"
     tools:context=".MuestraMarckisActivity">
 
+    <!--app:srcCompat="@drawable/img_base" -->
+
     <ImageView
         android:id="@+id/imagen_marckis"
-        android:layout_width="350dp"
-        android:layout_height="350dp"
+        android:layout_width="wrap_content"
+        android:layout_height="400dp"
         android:layout_marginStart="30dp"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="24dp"
         android:layout_marginEnd="30dp"
         android:contentDescription="@string/todo"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.4"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tv_marckis" />
-    <!--app:srcCompat="@drawable/img_base" -->
 
     <TextView
         android:id="@+id/tv_marckis"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="135dp"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="32dp"
         android:layout_marginEnd="135dp"
         android:text="@string/muestra_marckis"
         android:textAlignment="center"
@@ -40,12 +40,12 @@
 
     <RadioGroup
         android:id="@+id/rg_mar"
-        android:layout_width="145dp"
-        android:layout_height="152dp"
-        android:layout_marginStart="133dp"
-        android:layout_marginTop="13dp"
-        android:layout_marginEnd="135dp"
-        android:layout_marginBottom="15dp"
+        android:layout_width="175dp"
+        android:layout_height="98dp"
+        android:layout_marginStart="118dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="118dp"
+        android:layout_marginBottom="16dp"
         app:layout_constraintBottom_toTopOf="@+id/btnMecke"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -84,9 +84,9 @@
         android:id="@+id/btnMarVolver"
         android:layout_width="351dp"
         android:layout_height="wrap_content"
-        android:layout_marginStart="30dp"
-        android:layout_marginEnd="30dp"
-        android:layout_marginBottom="35dp"
+        android:layout_marginStart="27dp"
+        android:layout_marginEnd="27dp"
+        android:layout_marginBottom="16dp"
         android:text="@string/volver"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"

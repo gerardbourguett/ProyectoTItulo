@@ -10,39 +10,41 @@
 
     <ImageView
         android:id="@+id/imagen_mecke"
-        android:layout_width="350dp"
-        android:layout_height="350dp"
+        android:layout_width="wrap_content"
+        android:layout_height="400dp"
         android:layout_marginStart="30dp"
+        android:layout_marginTop="24dp"
         android:layout_marginEnd="30dp"
-        android:layout_marginBottom="21dp"
         android:contentDescription="@string/todo"
-        app:layout_constraintBottom_toTopOf="@+id/rg_mec"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tv_mecke" />
-        <!--app:srcCompat="@drawable/img_base" />-->
+    <!--app:srcCompat="@drawable/img_base" />-->
 
     <TextView
         android:id="@+id/tv_mecke"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="6dp"
-        android:layout_marginBottom="19dp"
+        android:layout_marginStart="135dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="135dp"
         android:text="@string/muestra_mecke"
         android:textAlignment="center"
         android:textColor="@color/primaryLightColor"
         android:textSize="18sp"
         android:textStyle="bold"
-        app:layout_constraintBottom_toTopOf="@+id/imagen_mecke"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <RadioGroup
         android:id="@+id/rg_mec"
-        android:layout_width="145dp"
-        android:layout_height="0dp"
-        android:layout_marginBottom="20dp"
+        android:layout_width="175dp"
+        android:layout_height="98dp"
+        android:layout_marginStart="118dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="118dp"
+        android:layout_marginBottom="16dp"
         app:layout_constraintBottom_toTopOf="@+id/btnMandelin"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -67,28 +69,23 @@
 
     <Button
         android:id="@+id/btnMandelin"
-        android:layout_width="0dp"
+        android:layout_width="355dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="28dp"
         android:layout_marginEnd="28dp"
-        android:layout_marginBottom="13dp"
+        android:layout_marginBottom="14dp"
         android:text="@string/pasar_a_mandelin"
         app:layout_constraintBottom_toTopOf="@+id/btnMecVolver"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/rg_mec" />
+        app:layout_constraintStart_toStartOf="parent" />
 
     <Button
         android:id="@+id/btnMecVolver"
-        android:layout_width="0dp"
+        android:layout_width="351dp"
         android:layout_height="wrap_content"
-        android:layout_marginStart="30dp"
-        android:layout_marginEnd="30dp"
-        android:layout_marginBottom="25dp"
+        android:layout_marginBottom="16dp"
         android:text="@string/volver"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btnMandelin" />
+        tools:layout_editor_absoluteX="30dp" />
 
 </android.support.constraint.ConstraintLayout>
